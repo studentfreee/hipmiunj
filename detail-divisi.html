@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT HIPMI UNJ</title>
+  <link rel="icon" type="image/png" href="images/hipmi_pt_unj_logo.png" />
+  <meta name="description" content="Struktur organisasi kepengurusan divisi PT HIPMI UNJ." />
+  <link rel="stylesheet" href="css/style.css?v=3.0" />
+  <style>
+    /* Custom Styles for Division Page Hierarchy */
+    .division-detail {
+      padding: 120px 0 100px;
+      background:
+        radial-gradient(circle at 10% 20%, var(--division-glow-1, rgba(252, 212, 2, 0.14)) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, var(--division-glow-2, rgba(0, 33, 71, 0.12)) 0%, transparent 45%),
+        linear-gradient(180deg, var(--division-bg-top, #faf9f6) 0%, var(--division-bg-bottom, #ffffff) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Laser sweep light beam */
+    .division-detail__glow-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(252, 212, 2, 0.15) 50%, transparent);
+      transform: skewX(-20deg) translateX(-100%);
+      pointer-events: none;
+      z-index: 1;
+      animation: divisionSweep 12s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    }
+
+    /* Ambient glassmorphism floating orbs */
+    .division-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.75;
+      mix-blend-mode: multiply;
+      transition: background 1.2s ease-in-out;
+    }
+
+    .division-orb--1 {
+      width: 380px;
+      height: 380px;
+      background: var(--division-orb-1, rgba(0, 33, 71, 0.18));
+      top: -60px;
+      left: -100px;
+      animation: divisionOrbFloat1 24s ease-in-out infinite alternate;
+    }
+
+    .division-orb--2 {
+      width: 420px;
+      height: 420px;
+      background: var(--division-orb-2, rgba(252, 212, 2, 0.24));
+      bottom: -100px;
+      right: -80px;
+      animation: divisionOrbFloat2 28s ease-in-out infinite alternate;
+    }
+
+    .division-orb--3 {
+      width: 260px;
+      height: 260px;
+      background: var(--division-glow-1, rgba(252, 212, 2, 0.18));
+      top: 40%;
+      left: 55%;
+      animation: divisionOrbFloat3 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes divisionOrbFloat1 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(80px, 60px) scale(1.1); }
+      100% { transform: translate(-30px, 120px) scale(0.95); }
+    }
+
+    @keyframes divisionOrbFloat2 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-100px, -70px) scale(0.9); }
+      100% { transform: translate(50px, -110px) scale(1.15); }
+    }
+
+    @keyframes divisionOrbFloat3 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(70px, -80px) scale(1.15); }
+      100% { transform: translate(-80px, 40px) scale(0.9); }
+    }
+    
+    .division-hero {
+      text-align: center;
+      margin-bottom: var(--space-8);
+      position: relative;
+      z-index: 2;
+    }
+    
+    .division-hero__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--division-title, var(--color-navy));
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-2);
+      transition: color 0.5s ease;
+    }
+    
+    .division-hero__desc {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--on-surface-variant);
+      opacity: 0;
+      animation: divisionHeroSubIn 0.8s ease both 0.2s;
+    }
+
+    @keyframes divisionHeroSubIn {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .division-back-link {
+      color: var(--division-title, var(--color-navy));
+      transition: transform 0.25s ease, opacity 0.25s ease, color 0.5s ease;
+      opacity: 0;
+      animation: divisionBackIn 0.75s ease both;
+    }
+
+    @keyframes divisionBackIn {
+      from { opacity: 0; transform: translateX(-24px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .division-back-link:hover {
+      transform: translateX(-4px);
+      opacity: 0.92;
+    }
+
+    /* Hierarchy Layout */
+    .hierarchy-section {
+      margin-bottom: 70px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hierarchy-title {
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-navy);
+      margin-bottom: 36px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0;
+    }
+
+    .section-visible .hierarchy-title {
+      animation: divisionHeroSubIn 0.8s ease both 0.1s;
+    }
+    
+    .hierarchy-title::after {
+      content: "";
+      height: 1.5px;
+      flex-grow: 1;
+      max-width: 80px;
+      background-color: var(--outline-variant);
+    }
+
+    /* Cards Size Constraints */
+    .member-card-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    
+    /* Responsive Grids */
+    .vice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 24px;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    /* Specific Sizing for Division Hierarchy */
+    .team-card--leader {
+      max-width: 320px;
+      width: 100%;
+      min-height: 380px;
+      border: 1.5px solid rgba(252, 212, 2, 0.45);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 20px;
+    }
+
+    .team-card--leader .team-card__name {
+      font-size: 17px !important;
+    }
+
+    .team-card--leader .team-card__role {
+      font-size: 12.5px !important;
+    }
+
+    .team-card--vice {
+      max-width: 260px;
+      width: 100%;
+      min-height: 310px;
+      border: 1.5px solid rgba(252, 212, 2, 0.35);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      border-radius: 18px;
+    }
+
+    .team-card--vice .team-card__name {
+      font-size: 15px !important;
+    }
+
+    .team-card--vice .team-card__role {
+      font-size: 11.5px !important;
+    }
+
+    .team-card--staff {
+      max-width: 220px;
+      width: 100%;
+      min-height: 270px;
+      margin: 0 auto;
+      border: 1.5px solid rgba(252, 212, 2, 0.3);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+    }
+
+    .team-card--staff .team-card__name {
+      font-size: 14px !important;
+    }
+
+    .team-card--staff .team-card__role {
+      font-size: 11px !important;
+    }
+
+    .team-card {
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    .section-visible .team-card {
+      animation-duration: 0.8s;
+      animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation-fill-mode: both;
+    }
+
+    .division-theme-float .division-hero__title,
+    .division-theme-wave .division-hero__title,
+    .division-theme-tilt .division-hero__title,
+    .division-theme-spark .division-hero__title,
+    .division-theme-lift .division-hero__title,
+    .division-theme-pulse .division-hero__title {
+      opacity: 0;
+    }
+
+    /* Specific title constraint for Bidang II to keep on a single line */
+    @media (min-width: 768px) {
+      .division-theme-wave .division-hero__title {
+        font-size: clamp(20px, 2.7vw, 34px) !important;
+        white-space: nowrap !important;
+      }
+    }
+
+    @keyframes divisionHeroRise {
+      from { opacity: 0; transform: translateY(28px); filter: blur(4px); }
+      to { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+
+    @keyframes divisionHeroSweep {
+      from { opacity: 0; transform: translateX(-26px); letter-spacing: -0.06em; }
+      to { opacity: 1; transform: translateX(0); letter-spacing: -0.02em; }
+    }
+
+    @keyframes divisionCardRise {
+      from { opacity: 0; transform: translateY(34px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    @keyframes divisionCardTilt {
+      from { opacity: 0; transform: perspective(800px) rotateX(16deg) translateY(28px); }
+      to { opacity: 1; transform: perspective(800px) rotateX(0deg) translateY(0); }
+    }
+
+    @keyframes divisionCardSlideLeft {
+      from { opacity: 0; transform: translateX(-36px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes divisionCardSlideRight {
+      from { opacity: 0; transform: translateX(36px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes divisionCardGlow {
+      from { opacity: 0; transform: scale(0.92) translateY(20px); box-shadow: 0 0 0 rgba(0,0,0,0); }
+      70% { opacity: 1; }
+      to { opacity: 1; transform: scale(1) translateY(0); box-shadow: 0 16px 40px rgba(0,0,0,0.08); }
+    }
+
+    @keyframes divisionCardPop {
+      0%   { opacity: 0; transform: scale(0.62) translateY(36px); }
+      70%  { transform: scale(1.06) translateY(-4px); opacity: 1; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    @keyframes divisionOrbFloat {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(16px) scale(1.06); }
+    }
+
+    @keyframes divisionSweep {
+      0% { transform: translateX(-45%); }
+      50% { transform: translateX(35%); }
+      100% { transform: translateX(120%); }
+    }
+
+    .division-theme-float .division-hero__title { animation: divisionHeroRise 0.8s ease both; }
+    .division-theme-wave .division-hero__title { animation: divisionHeroSweep 0.8s ease both; }
+    .division-theme-tilt .division-hero__title { animation: divisionHeroRise 0.8s ease both; }
+    .division-theme-spark .division-hero__title { animation: divisionHeroSweep 0.8s ease both; }
+    .division-theme-lift .division-hero__title { animation: divisionHeroRise 0.8s ease both; }
+    .division-theme-pulse .division-hero__title { animation: divisionHeroSweep 0.8s ease both; }
+
+    .division-theme-float .section-visible .team-card--leader { animation-name: divisionCardPop; }
+    .division-theme-float .section-visible .team-card--vice { animation-name: divisionCardPop; }
+    .division-theme-float .section-visible .team-card--staff { animation-name: divisionCardPop; }
+
+    .division-theme-wave .section-visible .team-card--leader { animation-name: divisionCardRise; }
+    .division-theme-wave .section-visible .team-card--vice { animation-name: divisionCardRise; }
+    .division-theme-wave .section-visible .team-card--staff { animation-name: divisionCardRise; }
+
+    .division-theme-tilt .section-visible .team-card--leader { animation-name: divisionCardTilt; }
+    .division-theme-tilt .section-visible .team-card--vice { animation-name: divisionCardTilt; }
+    .division-theme-tilt .section-visible .team-card--staff { animation-name: divisionCardTilt; }
+
+    .division-theme-spark .section-visible .team-card--leader { animation-name: divisionCardGlow; }
+    .division-theme-spark .section-visible .team-card--vice { animation-name: divisionCardGlow; }
+    .division-theme-spark .section-visible .team-card--staff { animation-name: divisionCardGlow; }
+
+    .division-theme-lift .section-visible .team-card--leader { animation-name: divisionCardRise; }
+    .division-theme-lift .section-visible .team-card--vice { animation-name: divisionCardRise; }
+    .division-theme-lift .section-visible .team-card--staff { animation-name: divisionCardRise; }
+
+    .division-theme-pulse .section-visible .team-card--leader { animation-name: divisionCardPop; }
+    .division-theme-pulse .section-visible .team-card--vice { animation-name: divisionCardPop; }
+    .division-theme-pulse .section-visible .team-card--staff { animation-name: divisionCardPop; }
+
+    .division-theme-float .hierarchy-title,
+    .division-theme-wave .hierarchy-title,
+    .division-theme-tilt .hierarchy-title,
+    .division-theme-spark .hierarchy-title,
+    .division-theme-lift .hierarchy-title,
+    .division-theme-pulse .hierarchy-title {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .division-theme-float .hierarchy-title::after,
+    .division-theme-wave .hierarchy-title::after,
+    .division-theme-tilt .hierarchy-title::after,
+    .division-theme-spark .hierarchy-title::after,
+    .division-theme-lift .hierarchy-title::after,
+    .division-theme-pulse .hierarchy-title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      width: 70px;
+      height: 3px;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, transparent, var(--division-title, var(--color-gold)), transparent);
+      border-radius: 9999px;
+      opacity: 0.7;
+    }
+    
+    /* Media Queries */
+    @media (max-width: 1024px) {
+      .vice-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+      }
+      .staff-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navbar__actions,
+      .navbar__toggle,
+      .navbar__mobile-menu {
+        display: none !important;
+      }
+
+      .division-detail {
+        padding-top: 88px;
+        padding-bottom: 24px;
+      }
+
+      .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .division-hero {
+        margin-bottom: var(--space-6);
+      }
+
+      .division-hero__title {
+        font-size: 28px;
+        line-height: 1.08;
+      }
+
+      .division-hero__desc {
+        font-size: 14px;
+        line-height: 1.65;
+      }
+
+      .hierarchy-section {
+        margin-bottom: 42px;
+      }
+
+      .hierarchy-title {
+        font-size: 13px;
+        gap: 10px;
+        margin-bottom: 24px;
+      }
+
+      .hierarchy-title::after {
+        max-width: 44px;
+      }
+
+      .member-card-wrapper {
+        margin-bottom: 28px;
+      }
+
+      .team-card--leader,
+      .team-card--vice,
+      .team-card--staff {
+        max-width: none;
+        width: 100%;
+      }
+
+      .vice-grid {
+        grid-template-columns: 1fr;
+        max-width: none;
+        gap: 14px;
+      }
+
+      .staff-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .division-hero__title {
+        font-size: 26px;
+      }
+
+      .division-hero__desc {
+        font-size: 13px;
+      }
+
+      .vice-grid {
+        max-width: none;
+      }
+
+      .staff-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-card--staff {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand" id="brand-logo">
+        <img src="images/hipmi_pt_unj_logo.png" alt="HIPMI PT UNJ Logo" class="navbar__brand-logo" />
+        <span>HIPMI PT UNJ</span>
+      </a>
+      <ul class="navbar__nav" role="list">
+        <li><a href="index.html" class="navbar__link" id="nav-home">Home</a></li>
+        <li><a href="about.html" class="navbar__link active" id="nav-about">Tentang Kami</a></li>
+        <li><a href="usaha.html" class="navbar__link" id="nav-usaha">Usaha</a></li>
+        <li><a href="blog.html" class="navbar__link" id="nav-blog">Blog</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="about.html#join" class="btn-primary" id="btn-gabung-nav">Gabung Anggota</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="navbar__mobile-menu" id="mobileMenu" role="menu">
+    <a href="index.html" class="navbar__mobile-link" role="menuitem">Home</a>
+    <a href="about.html" class="navbar__mobile-link active" role="menuitem">Tentang Kami</a>
+    <a href="usaha.html" class="navbar__mobile-link" role="menuitem">Usaha</a>
+    <a href="blog.html" class="navbar__mobile-link" role="menuitem">Blog</a>
+    <a href="about.html#join" class="btn-primary mt-1" style="border-radius:0.5rem; text-align:center;">Gabung Anggota</a>
+  </div>
+
+  <main class="division-detail">
+    <div class="division-detail__glow-line" aria-hidden="true"></div>
+    <div class="division-orb division-orb--1" aria-hidden="true"></div>
+    <div class="division-orb division-orb--2" aria-hidden="true"></div>
+    <div class="division-orb division-orb--3" aria-hidden="true"></div>
+
+    <div class="container">
+      
+      <!-- Back to About Link -->
+      <a href="about.html#struktur" class="back-link division-back-link" id="back-to-about" style="margin-bottom: var(--space-6); display: inline-flex;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+        </svg>
+        Kembali ke Tentang Kami
+      </a>
+
+      <!-- Hero Section -->
+      <div class="division-hero">
+        <h1 class="division-hero__title" id="divTitle">Divisi Kepengurusan</h1>
+        <p class="division-hero__desc" id="divDesc">Memuat informasi struktur organisasi divisi kepengurusan PT HIPMI UNJ.</p>
+      </div>
+
+      <!-- KETUA DIVISI -->
+      <div class="hierarchy-section" id="leaderSection">
+        <h2 class="hierarchy-title">Ketua Divisi</h2>
+        <div class="member-card-wrapper">
+          <div class="team-card team-card--leader">
+            <div class="team-card__image">
+              <img src="images/default-avatar.png" id="leaderImg" alt="Foto Ketua" />
+            </div>
+            <div class="team-card__info-overlay">
+              <p class="team-card__name" id="leaderName">Nama Ketua</p>
+              <p class="team-card__role" id="leaderRole">Ketua Divisi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WAKIL KETUA DIVISI -->
+      <div class="hierarchy-section" id="viceSection">
+        <h2 class="hierarchy-title">Wakil Ketua Divisi</h2>
+        <div class="vice-grid" id="viceGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+      <!-- ANGGOTA DIVISI -->
+      <div class="hierarchy-section" id="staffSection">
+        <h2 class="hierarchy-title">Anggota</h2>
+        <div class="staff-grid" id="staffGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand-col">
+          <p class="footer__brand">
+            <img src="images/hipmi_pt_unj_logo.png" alt="HIPMI PT UNJ Logo" class="footer__brand-icon" style="height: 36px; width: auto; object-fit: contain;" />
+            <span>HIPMI PT UNJ</span>
+          </p>
+        </div>
+
+        <!-- Links wrapper for alignment -->
+        <div class="footer__links-wrapper">
+          <!-- Quick Links -->
+          <div>
+            <p class="footer__col-title">Navigasi</p>
+            <ul class="footer__links">
+              <li><a href="about.html" class="footer__link" id="footer-tentang">Tentang Kami</a></li>
+              <li><a href="usaha.html" class="footer__link" id="footer-usaha">Usaha</a></li>
+              <li><a href="blog.html" class="footer__link" id="footer-blog">Blog</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontak -->
+          <div>
+            <p class="footer__col-title">Hubungi Kami</p>
+            <ul class="footer__links">
+              <li><a href="mailto:info@hipmiunj.id" class="footer__link">Email: info@hipmiunj.id</a></li>
+              <li><a href="https://wa.me/6281234567890" class="footer__link" target="_blank" rel="noopener noreferrer">WhatsApp: +62 812-3456-7890</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <span>&copy; 2026 PT HIPMI UNJ.</span>
+          <a href="#">Sitemap</a>
+          <a href="#">Privasi</a>
+          <a href="#" style="display: inline-flex; align-items: center; gap: 4px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Indonesia
+          </a>
+        </div>
+        <div class="footer__bottom-right">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM FLOATING NAVIGATION DOCK -->
+  <nav class="mobile-bottom-nav" aria-label="Navigasi bawah seluler">
+    <a href="index.html" class="mobile-bottom-nav__item" id="bnav-home">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a href="about.html" class="mobile-bottom-nav__item active" id="bnav-about">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Tentang</span>
+    </a>
+    <a href="usaha.html" class="mobile-bottom-nav__item" id="bnav-usaha">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <span>Usaha</span>
+    </a>
+    <a href="blog.html" class="mobile-bottom-nav__item" id="bnav-blog">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <span>Blog</span>
+    </a>
+  </nav>
+
+  <!-- Import Members Data and Main Scripts -->
+  <script src="js/members-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Get query parameter for division
+      const urlParams = new URLSearchParams(window.location.search);
+      const targetDiv = urlParams.get('divisi') || 'keanggotaan';
+
+      const themeMap = {
+        bidang1: {
+          className: 'division-theme-float',
+          bgTop: '#ffffff',
+          bgBottom: '#f3f4f6',
+          glow1: 'rgba(252, 212, 2, 0.28)',
+          glow2: 'rgba(156, 163, 175, 0.2)',
+          orb1: 'rgba(252, 212, 2, 0.22)',
+          orb2: 'rgba(209, 213, 219, 0.25)',
+          title: '#000a1e'
+        },
+        bidang2: {
+          className: 'division-theme-wave',
+          bgTop: '#ffffff',
+          bgBottom: '#f3f4f6',
+          glow1: 'rgba(252, 212, 2, 0.28)',
+          glow2: 'rgba(156, 163, 175, 0.2)',
+          orb1: 'rgba(252, 212, 2, 0.22)',
+          orb2: 'rgba(209, 213, 219, 0.25)',
+          title: '#000a1e'
+        },
+        bidang3: {
+          className: 'division-theme-tilt',
+          bgTop: '#ffffff',
+          bgBottom: '#f3f4f6',
+          glow1: 'rgba(252, 212, 2, 0.28)',
+          glow2: 'rgba(156, 163, 175, 0.2)',
+          orb1: 'rgba(252, 212, 2, 0.22)',
+          orb2: 'rgba(209, 213, 219, 0.25)',
+          title: '#000a1e'
+        },
+        bidang4: {
+          className: 'division-theme-spark',
+          bgTop: '#ffffff',
+          bgBottom: '#f3f4f6',
+          glow1: 'rgba(252, 212, 2, 0.28)',
+          glow2: 'rgba(156, 163, 175, 0.2)',
+          orb1: 'rgba(252, 212, 2, 0.22)',
+          orb2: 'rgba(209, 213, 219, 0.25)',
+          title: '#000a1e'
+        },
+        bidang5: {
+          className: 'division-theme-lift',
+          bgTop: '#ffffff',
+          bgBottom: '#f3f4f6',
+          glow1: 'rgba(252, 212, 2, 0.28)',
+          glow2: 'rgba(156, 163, 175, 0.2)',
+          orb1: 'rgba(252, 212, 2, 0.22)',
+          orb2: 'rgba(209, 213, 219, 0.25)',
+          title: '#000a1e'
+        },
+        bidang6: {
+          className: 'division-theme-pulse',
+          bgTop: '#ffffff',
+          bgBottom: '#f3f4f6',
+          glow1: 'rgba(252, 212, 2, 0.28)',
+          glow2: 'rgba(156, 163, 175, 0.2)',
+          orb1: 'rgba(252, 212, 2, 0.22)',
+          orb2: 'rgba(209, 213, 219, 0.25)',
+          title: '#000a1e'
+        }
+      };
+      
+      // 2. Fetch the corresponding division data from window.membersData
+      const divData = window.membersData && window.membersData[targetDiv];
+      const theme = themeMap[targetDiv] || themeMap.bidang1;
+
+      document.body.classList.add(theme.className);
+      const divisionDetail = document.querySelector('.division-detail');
+      if (divisionDetail) {
+        divisionDetail.style.setProperty('--division-bg-top', theme.bgTop);
+        divisionDetail.style.setProperty('--division-bg-bottom', theme.bgBottom);
+        divisionDetail.style.setProperty('--division-glow-1', theme.glow1);
+        divisionDetail.style.setProperty('--division-glow-2', theme.glow2);
+        divisionDetail.style.setProperty('--division-orb-1', theme.orb1);
+        divisionDetail.style.setProperty('--division-orb-2', theme.orb2);
+        divisionDetail.style.setProperty('--division-title', theme.title);
+      }
+      
+      if (!divData) {
+        // Fallback or Redirect if division is invalid
+        document.getElementById('divTitle').textContent = "Divisi Tidak Ditemukan";
+        document.getElementById('divDesc').textContent = "Kembali ke halaman Tentang Kami.";
+        document.getElementById('leaderSection').style.display = 'none';
+        document.getElementById('viceSection').style.display = 'none';
+        document.getElementById('staffSection').style.display = 'none';
+        return;
+      }
+      
+      // 3. Render Title & Description
+      document.title = `PT HIPMI UNJ`;
+      document.getElementById('divTitle').textContent = divData.title;
+      document.getElementById('divDesc').textContent = divData.description;
+      
+      // 4. Render Ketua (Leader)
+      if (divData.ketua) {
+        document.getElementById('leaderName').textContent = divData.ketua.name;
+        document.getElementById('leaderRole').textContent = divData.ketua.role;
+        document.getElementById('leaderImg').src = divData.ketua.image || 'images/default-avatar.png';
+        document.getElementById('leaderImg').alt = `${divData.ketua.name} — ${divData.ketua.role}`;
+      } else {
+        document.getElementById('leaderSection').style.display = 'none';
+      }
+      
+      // 5. Render Wakil Ketua (Vices)
+      const viceGrid = document.getElementById('viceGrid');
+      if (divData.wakil && divData.wakil.length > 0) {
+        viceGrid.innerHTML = divData.wakil.map(vice => `
+          <div class="team-card team-card--vice">
+            <div class="team-card__image">
+              <img src="${vice.image || 'images/default-avatar.png'}" alt="${vice.name} — ${vice.role}" />
+            </div>
+            <div class="team-card__info-overlay">
+              <p class="team-card__name" title="${vice.name}">${vice.name}</p>
+              <p class="team-card__role">${vice.role}</p>
+            </div>
+          </div>
+        `).join('');
+      } else {
+        document.getElementById('viceSection').style.display = 'none';
+      }
+      
+      // 6. Render Anggota (Staff)
+      const staffGrid = document.getElementById('staffGrid');
+      if (divData.anggota && divData.anggota.length > 0) {
+        staffGrid.innerHTML = divData.anggota.map(staff => `
+          <div class="team-card team-card--staff">
+            <div class="team-card__image">
+              <img src="${staff.image || 'images/default-avatar.png'}" alt="${staff.name} — ${staff.role}" />
+            </div>
+            <div class="team-card__info-overlay">
+              <p class="team-card__name" style="font-size: 13.5px;" title="${staff.name}">${staff.name}</p>
+              <p class="team-card__role" style="font-size: 10px; color: var(--color-gold);">${staff.role}</p>
+            </div>
+          </div>
+        `).join('');
+      } else {
+        document.getElementById('staffSection').style.display = 'none';
+      }
+
+      const leaderCard = document.querySelector('.team-card--leader');
+      const viceCards = document.querySelectorAll('.team-card--vice');
+      const staffCards = document.querySelectorAll('.team-card--staff');
+
+      if (leaderCard) leaderCard.style.animationDelay = '0.08s';
+      viceCards.forEach((card, index) => {
+        card.style.animationDelay = `${0.12 + index * 0.08}s`;
+      });
+      staffCards.forEach((card, index) => {
+        card.style.animationDelay = `${0.18 + index * 0.035}s`;
+      });
+
+      // IntersectionObserver to trigger animations dynamically on scroll
+      if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('section-visible');
+              sectionObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.hierarchy-section').forEach(section => {
+          sectionObserver.observe(section);
+        });
+      } else {
+        // Fallback for older browsers
+        document.querySelectorAll('.hierarchy-section').forEach(section => {
+          section.classList.add('section-visible');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

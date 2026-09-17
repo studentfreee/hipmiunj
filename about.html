@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT HIPMI UNJ</title>
+  <link rel="icon" type="image/png" href="images/hipmi_pt_unj_logo.png" />
+  <meta name="description"
+    content="PT HIPMI UNJ adalah katalisator bagi mahasiswa Universitas Negeri Jakarta untuk merintis dan mengembangkan potensi bisnis mereka." />
+  <link rel="stylesheet" href="css/style.css?v=3.0" />
+  <style>
+    @media (max-width: 768px) {
+      /* Hide Top Hamburger & Mobile Menu (Replaced by Bottom Dock) */
+      .navbar__actions,
+      .navbar__toggle,
+      .navbar__mobile-menu {
+        display: none !important;
+      }
+
+      /* Visi & Misi Cards — Proper Mobile Proportions */
+      .vm-grid-dual {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+      }
+
+      .vm-card {
+        padding: 28px 24px !important;
+        border-radius: 20px !important;
+        min-height: auto !important;
+      }
+
+      .vm-card__name {
+        font-size: 20px !important;
+      }
+
+      .vm-card__quote {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+      }
+
+      .vm-card__list {
+        font-size: 13px !important;
+        line-height: 1.55 !important;
+      }
+
+      .vm-card__list li {
+        font-size: 13px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .vm-card__bg-word {
+        font-size: 60px !important;
+        bottom: -10px !important;
+        right: -5px !important;
+      }
+
+      /* BPH Inti, Wakil (Wasekum & Wabum), & Struktur Cards — Horizontal Swipe Row */
+      #struktur .grid-3,
+      .bph-wakil-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 16px !important;
+        padding: 8px 4px 16px !important;
+        -webkit-overflow-scrolling: touch !important;
+        max-width: 100% !important;
+      }
+
+      #struktur .grid-3 .team-card,
+      .bph-wakil-grid .team-card,
+      .vice-grid .team-card,
+      .staff-grid .team-card {
+        flex: 0 0 78% !important;
+        scroll-snap-align: start !important;
+        min-width: 78% !important;
+        max-width: 78% !important;
+        box-sizing: border-box !important;
+      }
+
+      /* Shift "HIPMI PT UNJ" text to the right on mobile towards the logo */
+      .about-hero__brand-name {
+        transform: translateX(20px) !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand" id="brand-logo">
+        <img src="images/hipmi_pt_unj_logo.png" alt="HIPMI PT UNJ Logo" class="navbar__brand-logo" />
+        <span>HIPMI PT UNJ</span>
+      </a>
+      <ul class="navbar__nav" role="list">
+        <li><a href="index.html" class="navbar__link" id="nav-home">Home</a></li>
+        <li><a href="about.html" class="navbar__link active" id="nav-about">Tentang Kami</a></li>
+        <li><a href="usaha.html" class="navbar__link" id="nav-usaha">Usaha</a></li>
+        <li><a href="blog.html" class="navbar__link" id="nav-blog">Blog</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="about.html#join" class="btn-primary" id="btn-gabung-nav">Gabung Anggota</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="navbar__mobile-menu" id="mobileMenu" role="menu">
+    <a href="index.html" class="navbar__mobile-link" role="menuitem">Home</a>
+    <a href="about.html" class="navbar__mobile-link active" role="menuitem">Tentang Kami</a>
+    <a href="usaha.html" class="navbar__mobile-link" role="menuitem">Usaha</a>
+    <a href="blog.html" class="navbar__mobile-link" role="menuitem">Blog</a>
+    <a href="about.html#join" class="btn-primary mt-1" style="border-radius:0.5rem; text-align:center;">Gabung
+      Anggota</a>
+  </div>
+
+  <main class="about-light-flow">
+
+    <!-- Quick Navigation Tabs (Wireframe Spec) -->
+    <div class="about-tabs-container">
+      <div class="container">
+        <div class="about-tabs">
+          <a href="#tentang" class="about-tab active" id="tab-tentang">Tentang</a>
+          <a href="#visi" class="about-tab" id="tab-visi">Visi Misi</a>
+          <a href="#struktur" class="about-tab" id="tab-struktur">Struktur</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================
+         ABOUT HERO
+         ================================================ -->
+    <section class="about-hero" id="tentang" aria-label="Tentang PT HIPMI UNJ"
+      style="padding-top: calc(64px + var(--space-4));">
+      <div class="container">
+        <div class="about-hero__grid">
+          <!-- Left: Sejarah Terbentuk -->
+          <div class="about-hero__content">
+            <h2 class="about-hero__subtitle">Sejarah Terbentuk</h2>
+            <p class="about-hero__desc">
+              (HIPMI) didirikan pada 10 Juni 1972. Pendirian organisasi ini dilandasi semangat untuk menumbuhkan
+              wirausaha di kalangan pemuda, karena pada saat itu tidak banyak kaum muda yang bercita-cita menjadi
+              pengusaha.
+            </p>
+            <p class="about-hero__desc">
+              HIPMI PT UNJ sebagai organisasi pengusaha muda di lingkungan Universitas Negeri Jakarta yang senantiasa
+              melahirkan inovasi dan kreasi melalui unit usaha para anggotanya ingin memulai suatu pergerakan untuk
+              mendukung implementasi semangat Pengusaha Muda. Sebuah visi dimana UNJ menjadi garda terdepan perkembangan
+              ekonomi kreatif Indonesia.
+            </p>
+          </div>
+          <!-- Right: Logo + Brand Name -->
+          <div class="about-hero__brand">
+            <h1 class="about-hero__brand-name">HIPMI<br>PT UNJ</h1>
+            <div class="logo-reveal-wrap">
+              <div class="logo-glow-ring" aria-hidden="true"></div>
+              <img src="images/test-removebg.png" alt="Logo HIPMI PT UNJ" class="about-hero__logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================
+         VISI & MISI SECTION
+         ================================================ -->
+    <section class="vm-section" id="visi" aria-label="Visi dan Misi HIPMI PT UNJ">
+      <div class="container">
+        
+        <div class="vm-header">
+          <h2 class="vm-title">Visi &amp; Misi</h2>
+        </div>
+
+        <div class="vm-grid-dual">
+
+          <!-- CARD 1: VISI -->
+          <div class="vm-card">
+            <div class="vm-card__bg-word">VISI</div>
+            <div class="vm-card__header">
+              <h3 class="vm-card__name">Visi</h3>
+            </div>
+            <p class="vm-card__quote">
+              Menjadikan HIPMI PT UNJ sebagai pusat pengembangan kewirausahaan mahasiswa yang progresif, inklusif, dan berdampak nyata bagi kampus, dunia usaha, serta pembangunan nasional.
+            </p>
+            <div class="vm-card__accent-line"></div>
+          </div>
+
+          <!-- CARD 2: MISI -->
+          <div class="vm-card">
+            <div class="vm-card__bg-word">MISI</div>
+            <div class="vm-card__header">
+              <h3 class="vm-card__name">Misi</h3>
+            </div>
+            <ul class="vm-card__list">
+              <li>Menciptakan sistem kaderisasi yang terstruktur, inklusif, dan progresif untuk mencetak kader berkarakter <strong>&ldquo;Pengusaha Pejuang, Pejuang Pengusaha&rdquo;</strong></li>
+              <li>Menghadirkan program kerja berbasis dampak dan keberlanjutan, bukan sekadar seremonial.</li>
+              <li>Menguatkan hubungan kelembagaan dengan BAKORDA HIPMI PT Jaya, BPD HIPMI Jaya BPC Jakarta Timur, pemerintah, dan stakeholder dunia usaha.</li>
+              <li>Menguatkan peran HIPMI PT UNJ sebagai wadah kaderisasi pengusaha muda yang visioner, profesional, dan berkontribusi sosial.</li>
+              <li>Memaksimalkan digitalisasi organisasi untuk meningkatkan efisiensi, branding, dan transparansi.</li>
+            </ul>
+            <div class="vm-card__accent-line vm-card__accent-line--emerald"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================
+         STRUKTUR ORGANISASI
+         ================================================ -->
+    <section class="org-section" id="struktur" aria-label="Struktur Organisasi">
+      <div class="container">
+        <div class="org-section__header">
+          <h2 style="font-family:'Montserrat',sans-serif; font-size:32px; font-weight:700; color:var(--on-surface);">
+            Struktur Organisasi</h2>
+          <p class="org-section__subtitle">Tim penggerak dedikatif yang berkomitmen untuk mewujudkan visi dan misi PT
+            HIPMI UNJ melalui program kerja yang terstruktur dan berdampak.</p>
+        </div>
+
+        <!-- Badan Pengurus Harian Inti -->
+        <h3
+          style="font-family:'Montserrat',sans-serif; font-size:18px; font-weight:700; color:var(--on-surface); margin-bottom:var(--space-4);">
+          Badan Pengurus Harian Inti</h3>
+        <div class="grid-3" style="max-width: 860px; margin: 0 auto; gap: 24px;">
+          <!-- Sekretaris Umum -->
+          <div class="team-card" id="team-andi">
+            <div class="team-card__image">
+              <img src="images/members/Andi_Abd_Salam_Sekretaris_Umum.png" alt="Andi Abd. Salam — Sekretaris Umum" />
+            </div>
+            <div class="team-card__info-overlay">
+              <p class="team-card__name">Andi Abd. Salam</p>
+              <p class="team-card__role">Sekretaris Umum</p>
+            </div>
+          </div>
+          <!-- Ketua Umum -->
+          <div class="team-card" id="team-iwan">
+            <div class="team-card__image">
+              <img src="images/members/Iwan_Ketua_Umum.png" alt="Iwan — Ketua Umum" />
+            </div>
+            <div class="team-card__info-overlay">
+              <p class="team-card__name">Iwan</p>
+              <p class="team-card__role">Ketua Umum</p>
+            </div>
+          </div>
+          <!-- Bendahara Umum -->
+          <div class="team-card" id="team-arfan">
+            <div class="team-card__image">
+              <img src="images/members/Arfan_Prawirayudha_Wicaksono_Bendahara_Umum.png" alt="Arfan Prawirayudha Wicaksono — Bendahara Umum" />
+            </div>
+            <div class="team-card__info-overlay">
+              <p class="team-card__name" style="font-size: 14.5px;">Arfan Prawirayudha</p>
+              <p class="team-card__role">Bendahara Umum</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barisan Wakil (Level 2) -->
+        <div class="bph-wakil-container">
+          <!-- Wakil Sekretaris Umum Column -->
+          <div class="bph-wakil-col">
+            <h4 class="bph-wakil-title">Wakil Sekretaris Umum</h4>
+            <div class="bph-wakil-grid">
+              <!-- Wasekum 1 -->
+              <div class="team-card" id="team-aisyah">
+                <div class="team-card__image">
+                  <img src="images/members/Sitti_Aisyah_Ramandhani_C_Wakil_Sekretaris_Umum_I.png" alt="Siti Aisyah Ramadhanti C. — Wakil Sekretaris Umum I" />
+                </div>
+                <div class="team-card__info-overlay">
+                  <p class="team-card__name" style="font-size: 13.5px;" title="Siti Aisyah Ramadhanti C.">Siti Aisyah R.
+                    C.</p>
+                  <p class="team-card__role" style="font-size: 10px;">Wasekum I</p>
+                </div>
+              </div>
+              <!-- Wasekum 2 -->
+              <div class="team-card" id="team-raya">
+                <div class="team-card__image">
+                  <img src="images/members/Siti_Raya_Kausart_Wakil_Sekretaris_Umum_II.png" alt="Siti Raya Kausart — Wakil Sekretaris Umum II" />
+                </div>
+                <div class="team-card__info-overlay">
+                  <p class="team-card__name" style="font-size: 13.5px;" title="Siti Raya Kausart">Siti Raya K.</p>
+                  <p class="team-card__role" style="font-size: 10px;">Wasekum II</p>
+                </div>
+              </div>
+              <!-- Wasekum 3 -->
+              <div class="team-card" id="team-dhiyas">
+                <div class="team-card__image">
+                  <img src="images/members/Dhiyas_Tsabita_Wakil_Sekretaris_Umum_III.png" alt="Dhiyas Tsabita — Wakil Sekretaris Umum III" />
+                </div>
+                <div class="team-card__info-overlay">
+                  <p class="team-card__name" style="font-size: 13.5px;" title="Dhiyas Tsabita">Dhiyas Tsabita</p>
+                  <p class="team-card__role" style="font-size: 10px;">Wasekum III</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wakil Bendahara Umum Column -->
+          <div class="bph-wakil-col">
+            <h4 class="bph-wakil-title">Wakil Bendahara Umum</h4>
+            <div class="bph-wakil-grid">
+              <!-- Wabendum 1 -->
+              <div class="team-card" id="team-leon">
+                <div class="team-card__image">
+                  <img src="images/members/Leon_Hezkiel_Wakil_Bendahara_Umum_I.png" alt="Leon Hezkiel — Wakil Bendahara Umum I" />
+                </div>
+                <div class="team-card__info-overlay">
+                  <p class="team-card__name" style="font-size: 13.5px;" title="Leon Hezkiel">Leon Hezkiel</p>
+                  <p class="team-card__role" style="font-size: 10px;">Wabendum I</p>
+                </div>
+              </div>
+              <!-- Wabendum 2 -->
+              <div class="team-card" id="team-anita">
+                <div class="team-card__image">
+                  <img src="images/members/Anita_Rahma_Sari_Wakil_Bendahara_Umum_II.png" alt="Anita Rahma Sari — Wakil Bendahara Umum II" />
+                </div>
+                <div class="team-card__info-overlay">
+                  <p class="team-card__name" style="font-size: 13.5px;" title="Anita Rahma Sari">Anita Rahma S.</p>
+                  <p class="team-card__role" style="font-size: 10px;">Wabendum II</p>
+                </div>
+              </div>
+              <!-- Wabendum 3 -->
+              <div class="team-card" id="team-kafkia">
+                <div class="team-card__image">
+                  <img src="images/members/Kafkia_Eksabilia_Wakil_Bendahara_Umum_III.png" alt="Kafkia Eksabilia — Wakil Bendahara Umum III" />
+                </div>
+                <div class="team-card__info-overlay">
+                  <p class="team-card__name" style="font-size: 13.5px;" title="Kafkia Eksabilia">Kafkia E.</p>
+                  <p class="team-card__role" style="font-size: 10px;">Wabendum III</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divisi Kepengurusan -->
+        <h3
+          style="font-family:'Montserrat',sans-serif; font-size:18px; font-weight:700; color:var(--on-surface); margin-top:var(--space-8); margin-bottom:var(--space-1);">
+          Divisi Kepengurusan</h3>
+        <div class="divisions-grid">
+          <a href="detail-divisi.html?divisi=bidang1" class="division-card-link">
+            <div class="division-item" id="divisi-bidang1">
+              <div class="division-item__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <p class="division-item__name">Bidang I: OKK</p>
+            </div>
+          </a>
+
+          <a href="detail-divisi.html?divisi=bidang2" class="division-card-link">
+            <div class="division-item" id="divisi-bidang2">
+              <div class="division-item__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <p class="division-item__name">Bidang II: Ekonomi &amp; Startup</p>
+            </div>
+          </a>
+
+          <a href="detail-divisi.html?divisi=bidang3" class="division-card-link">
+            <div class="division-item" id="divisi-bidang3">
+              <div class="division-item__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                </svg>
+              </div>
+              <p class="division-item__name">Bidang III: Perdagangan &amp; ESDM</p>
+            </div>
+          </a>
+
+          <a href="detail-divisi.html?divisi=bidang4" class="division-card-link">
+            <div class="division-item" id="divisi-bidang4">
+              <div class="division-item__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <p class="division-item__name">Bidang IV: Kajian Strategis</p>
+            </div>
+          </a>
+
+          <a href="detail-divisi.html?divisi=bidang5" class="division-card-link">
+            <div class="division-item" id="divisi-bidang5">
+              <div class="division-item__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+              </div>
+              <p class="division-item__name">Bidang V: Humas</p>
+            </div>
+          </a>
+
+          <a href="detail-divisi.html?divisi=bidang6" class="division-card-link">
+            <div class="division-item" id="divisi-bidang6">
+              <div class="division-item__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="7" />
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                </svg>
+              </div>
+              <p class="division-item__name">Bidang VI: Pemuda &amp; Olahraga</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand-col">
+          <p class="footer__brand">
+            <img src="images/hipmi_pt_unj_logo.png" alt="HIPMI PT UNJ Logo" class="footer__brand-icon"
+              style="height: 36px; width: auto; object-fit: contain;" />
+            <span>HIPMI PT UNJ</span>
+          </p>
+        </div>
+
+        <!-- Links wrapper for alignment -->
+        <div class="footer__links-wrapper">
+          <!-- Quick Links -->
+          <div>
+            <p class="footer__col-title">Navigasi</p>
+            <ul class="footer__links">
+              <li><a href="about.html" class="footer__link active" id="footer-tentang">Tentang Kami</a></li>
+              <li><a href="usaha.html" class="footer__link" id="footer-usaha">Usaha</a></li>
+              <li><a href="blog.html" class="footer__link" id="footer-blog">Blog</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontak -->
+          <div>
+            <p class="footer__col-title">Hubungi Kami</p>
+            <ul class="footer__links">
+              <li><a href="mailto:info@hipmiunj.id" class="footer__link">Email: info@hipmiunj.id</a></li>
+              <li><a href="https://wa.me/6281234567890" class="footer__link" target="_blank"
+                  rel="noopener noreferrer">WhatsApp: +62 812-3456-7890</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <span>&copy; 2026 PT HIPMI UNJ.</span>
+          <a href="#">Sitemap</a>
+          <a href="#">Privasi</a>
+          <a href="#" style="display: inline-flex; align-items: center; gap: 4px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            Indonesia
+          </a>
+        </div>
+        <div class="footer__bottom-right">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM FLOATING NAVIGATION DOCK -->
+  <nav class="mobile-bottom-nav" aria-label="Navigasi bawah seluler">
+    <a href="index.html" class="mobile-bottom-nav__item" id="bnav-home">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a href="about.html" class="mobile-bottom-nav__item active" id="bnav-about">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Tentang</span>
+    </a>
+    <a href="usaha.html" class="mobile-bottom-nav__item" id="bnav-usaha">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <span>Usaha</span>
+    </a>
+    <a href="blog.html" class="mobile-bottom-nav__item" id="bnav-blog">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <span>Blog</span>
+    </a>
+  </nav>
+
+  <script src="js/main.js"></script>
+  <script src="js/about-animations.js"></script>
+</body>
+
+</html>

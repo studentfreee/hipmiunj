@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT HIPMI UNJ</title>
+  <link rel="icon" type="image/png" href="images/hipmi_pt_unj_logo.png" />
+  <meta name="description" content="Ekosistem kewirausahaan di perguruan tinggi merupakan salah satu kunci utama dalam mencetak generasi penerus yang tidak hanya cerdas akademis." />
+  <link rel="stylesheet" href="css/style.css?v=3.0" />
+  <style>
+    /* Premium background with floating ambient orbs */
+    .blog-detail {
+      padding: 120px 0 100px;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(252, 212, 2, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(156, 163, 175, 0.12) 0%, transparent 45%),
+        linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.75;
+      mix-blend-mode: multiply;
+    }
+
+    .blog-orb--1 {
+      width: 380px;
+      height: 380px;
+      background: rgba(252, 212, 2, 0.22);
+      top: -60px;
+      left: -100px;
+      animation: blogOrbFloat1 24s ease-in-out infinite alternate;
+    }
+
+    .blog-orb--2 {
+      width: 420px;
+      height: 420px;
+      background: rgba(209, 213, 219, 0.25);
+      bottom: -100px;
+      right: -80px;
+      animation: blogOrbFloat2 28s ease-in-out infinite alternate;
+    }
+
+    .blog-orb--3 {
+      width: 260px;
+      height: 260px;
+      background: rgba(252, 212, 2, 0.18);
+      top: 40%;
+      left: 55%;
+      animation: blogOrbFloat3 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes blogOrbFloat1 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(80px, 60px) scale(1.1); }
+      100% { transform: translate(-30px, 120px) scale(0.95); }
+    }
+
+    @keyframes blogOrbFloat2 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-100px, -70px) scale(0.9); }
+      100% { transform: translate(50px, -110px) scale(1.15); }
+    }
+
+    @keyframes blogOrbFloat3 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(70px, -80px) scale(1.15); }
+      100% { transform: translate(-80px, 40px) scale(0.9); }
+    }
+
+    /* Container alignment for title section */
+    .blog-detail__header-wrapper {
+      max-width: 850px;
+      margin: 0 auto 32px;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Dynamic metadata elements */
+    .blog-detail__meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: var(--on-surface-variant);
+      opacity: 0;
+      animation: blogFadeUp 0.8s ease both;
+    }
+
+    .blog-detail__date {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Title display with fluid clamp scaling */
+    .blog-detail__title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(26px, 4.5vw, 42px);
+      font-weight: 800;
+      color: var(--color-navy);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: blogFadeUp 0.8s ease both 0.1s;
+    }
+
+    /* Hero Image styling enhancement */
+    .blog-detail__hero-image {
+      max-width: 850px;
+      margin: 0 auto 40px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--outline-variant);
+      opacity: 0;
+      transform: scale(0.96) translateY(30px);
+      animation: blogHeroReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both 0.2s;
+      z-index: 2;
+      position: relative;
+    }
+
+    .blog-detail__body {
+      opacity: 0;
+      animation: blogFadeUp 0.8s ease both 0.35s;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Entrance keyframes */
+    @keyframes blogFadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes blogHeroReveal {
+      from { opacity: 0; transform: scale(0.96) translateY(30px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* Back Link styling */
+    .blog-detail .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: var(--space-6);
+      color: var(--color-navy);
+      font-weight: 600;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0;
+      animation: blogBackIn 0.8s ease both;
+    }
+
+    @keyframes blogBackIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .blog-detail .back-link:hover {
+      transform: translateX(-4px);
+      opacity: 0.85;
+    }
+
+    /* Scroll triggered card entrance classes */
+    .card-article {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .card-article.card-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .navbar__actions,
+      .navbar__toggle,
+      .navbar__mobile-menu {
+        display: none !important;
+      }
+
+      /* Artikel Terkait — Mobile Horizontal Scroll Swipe */
+      .related-section #relatedGrid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 16px !important;
+        padding: 8px 4px 16px !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
+
+      .related-section #relatedGrid .card-article {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: stretch !important;
+        flex: 0 0 82% !important;
+        scroll-snap-align: start !important;
+        min-width: 82% !important;
+        max-width: 82% !important;
+        min-height: 180px !important;
+        height: 180px !important;
+        box-sizing: border-box !important;
+        background: #ffffff !important;
+      }
+
+      .related-section #relatedGrid .card-article__image {
+        width: 36% !important;
+        min-height: 180px !important;
+        height: 180px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .related-section #relatedGrid .card-article__body {
+        padding: 12px 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        gap: 4px !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+      }
+
+      .related-section #relatedGrid .card-article__title {
+        font-size: 14px !important;
+        font-weight: 800 !important;
+        margin: 0 !important;
+        line-height: 1.25 !important;
+      }
+
+      .related-section #relatedGrid .card-article__excerpt {
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+        margin: 0 !important;
+        color: #4b5563 !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+
+      .related-section #relatedGrid .card-article__link {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__brand" id="brand-logo">
+        <img src="images/hipmi_pt_unj_logo.png" alt="HIPMI PT UNJ Logo" class="navbar__brand-logo" />
+        <span>HIPMI PT UNJ</span>
+      </a>
+      <ul class="navbar__nav" role="list">
+        <li><a href="index.html" class="navbar__link" id="nav-home">Home</a></li>
+        <li><a href="about.html" class="navbar__link" id="nav-about">Tentang Kami</a></li>
+        <li><a href="usaha.html" class="navbar__link" id="nav-usaha">Usaha</a></li>
+        <li><a href="blog.html" class="navbar__link active" id="nav-blog">Blog</a></li>
+      </ul>
+      <div class="navbar__actions">
+        <a href="about.html#join" class="btn-primary" id="btn-gabung-nav">Gabung Anggota</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="navbar__mobile-menu" id="mobileMenu" role="menu">
+    <a href="index.html" class="navbar__mobile-link" role="menuitem">Home</a>
+    <a href="about.html" class="navbar__mobile-link" role="menuitem">Tentang Kami</a>
+    <a href="usaha.html" class="navbar__mobile-link" role="menuitem">Usaha</a>
+    <a href="blog.html" class="navbar__mobile-link active" role="menuitem">Blog</a>
+    <a href="about.html#join" class="btn-primary mt-1" style="border-radius:0.5rem; text-align:center;">Gabung Anggota</a>
+  </div>
+
+  <main class="blog-detail">
+    <!-- Ambient background orbs -->
+    <div class="blog-orb blog-orb--1" aria-hidden="true"></div>
+    <div class="blog-orb blog-orb--2" aria-hidden="true"></div>
+    <div class="blog-orb blog-orb--3" aria-hidden="true"></div>
+
+    <div class="container">
+
+      <!-- Back link -->
+      <a href="blog.html" class="back-link" id="back-to-blog">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Kembali ke Blog
+      </a>
+
+      <!-- Article Header Meta & Title -->
+      <div class="blog-detail__header-wrapper">
+        <div class="blog-detail__meta" id="blogMetaContainer">
+          <span class="pill pill-gold" id="blogCategory">Berita</span>
+          <span class="blog-detail__date">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span id="blogDateText">12 Jun 2024</span>
+          </span>
+        </div>
+        <h1 class="blog-detail__title" id="blogTitle">Judul Artikel</h1>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="blog-detail__hero-image">
+        <img src="" alt="" id="blogHeroImage" />
+      </div>
+
+      <!-- Article Body -->
+      <article class="blog-detail__body" id="blogBody" aria-label="Isi artikel">
+        <!-- Dynamic paragraphs will load here -->
+      </article>
+    </div>
+
+    <!-- RELATED ARTICLES -->
+    <section class="related-section" aria-label="Artikel Terkait">
+      <div class="container">
+        <div class="related-section__header">
+          <h2 class="related-section__title">Artikel Terkait</h2>
+          <a href="blog.html" class="link-more" id="btn-lihat-semua-related">Lihat Semua &rarr;</a>
+        </div>
+
+        <div class="grid-3" id="relatedGrid">
+          <!-- Dynamic related articles will load here -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <!-- Brand -->
+        <div class="footer__brand-col">
+          <p class="footer__brand">
+            <img src="images/hipmi_pt_unj_logo.png" alt="HIPMI PT UNJ Logo" class="footer__brand-icon" style="height: 36px; width: auto; object-fit: contain;" />
+            <span>HIPMI PT UNJ</span>
+          </p>
+        </div>
+
+        <!-- Links wrapper for alignment -->
+        <div class="footer__links-wrapper">
+          <!-- Quick Links -->
+          <div>
+            <p class="footer__col-title">Navigasi</p>
+            <ul class="footer__links">
+              <li><a href="about.html" class="footer__link" id="footer-tentang">Tentang Kami</a></li>
+              <li><a href="usaha.html" class="footer__link" id="footer-usaha">Usaha</a></li>
+              <li><a href="blog.html" class="footer__link active" id="footer-blog">Blog</a></li>
+            </ul>
+          </div>
+
+          <!-- Kontak -->
+          <div>
+            <p class="footer__col-title">Hubungi Kami</p>
+            <ul class="footer__links">
+              <li><a href="mailto:info@hipmiunj.id" class="footer__link">Email: info@hipmiunj.id</a></li>
+              <li><a href="https://wa.me/6281234567890" class="footer__link" target="_blank" rel="noopener noreferrer">WhatsApp: +62 812-3456-7890</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <span>&copy; 2026 PT HIPMI UNJ.</span>
+          <a href="#">Sitemap</a>
+          <a href="#">Privasi</a>
+          <a href="#" style="display: inline-flex; align-items: center; gap: 4px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            Indonesia
+          </a>
+        </div>
+        <div class="footer__bottom-right">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE BOTTOM FLOATING NAVIGATION DOCK -->
+  <nav class="mobile-bottom-nav" aria-label="Navigasi bawah seluler">
+    <a href="index.html" class="mobile-bottom-nav__item" id="bnav-home">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Beranda</span>
+    </a>
+    <a href="about.html" class="mobile-bottom-nav__item" id="bnav-about">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span>Tentang</span>
+    </a>
+    <a href="usaha.html" class="mobile-bottom-nav__item" id="bnav-usaha">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <span>Usaha</span>
+    </a>
+    <a href="blog.html" class="mobile-bottom-nav__item active" id="bnav-blog">
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <span>Blog</span>
+    </a>
+  </nav>
+
+  <script src="js/catalog-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const blogId = urlParams.get('id') || 'pitching-day-2024';
+      const blogData = window.blogsData && window.blogsData[blogId];
+      
+      if (!blogData) {
+        document.getElementById('blogBody').innerHTML = `
+          <div style="text-align: center; padding: 40px 0;">
+            <h2>Artikel Tidak Ditemukan</h2>
+            <p>Kembali ke <a href="blog.html" style="color: var(--color-gold); text-decoration: underline;">Halaman Blog</a>.</p>
+          </div>
+        `;
+        return;
+      }
+      
+      // Update page title & description
+      document.title = `PT HIPMI UNJ`;
+      
+      // Render Header Meta & Title
+      document.getElementById('blogCategory').textContent = blogData.category;
+      document.getElementById('blogDateText').textContent = blogData.date;
+      document.getElementById('blogTitle').textContent = blogData.title;
+      
+      // Update hero image
+      const heroImg = document.getElementById('blogHeroImage');
+      heroImg.src = blogData.mainImage;
+      heroImg.alt = `${blogData.title} — Gambar Artikel`;
+      
+      // Update body paragraphs
+      const bodyContainer = document.getElementById('blogBody');
+      let htmlContent = '';
+      
+      blogData.paragraphs.forEach((pText, index) => {
+        // Insert paragraph
+        htmlContent += `<p>${pText}</p>`;
+        
+        // If there's a quote, insert it after the first paragraph
+        if (index === 0 && blogData.quote) {
+          htmlContent += `
+            <blockquote class="blog-detail__blockquote">
+              <p>"${blogData.quote}"</p>
+            </blockquote>
+          `;
+        }
+      });
+      
+      // Append Share Bar
+      htmlContent += `
+        <div class="blog-detail__share" style="margin-top: 40px;">
+          <span class="blog-detail__share-label">Bagikan Artikel Ini:</span>
+          <button class="btn-outline btn-sm" id="copyLinkBtn" type="button" aria-label="Salin tautan artikel">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            <span class="copy-link-label">Salin Tautan</span>
+          </button>
+        </div>
+      `;
+      
+      bodyContainer.innerHTML = htmlContent;
+      
+      // Render Related Articles
+      const relatedGrid = document.getElementById('relatedGrid');
+      if (relatedGrid) {
+        const allBlogKeys = Object.keys(window.blogsData);
+        const filteredKeys = allBlogKeys.filter(key => key !== blogId);
+        const selectedKeys = filteredKeys.slice(0, 3);
+        
+        relatedGrid.innerHTML = selectedKeys.map(key => {
+          const item = window.blogsData[key];
+          return `
+            <article class="card-article" onclick="window.location.href='detail-blog.html?id=${key}'" style="cursor: pointer;">
+              <div class="card-article__image">
+                <img src="${item.mainImage}" alt="${item.title}" loading="lazy" />
+                <div class="card-article__pill"><span class="pill pill-gold">${item.category}</span></div>
+              </div>
+              <div class="card-article__body">
+                <div class="card-article__date">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <span>${item.date}</span>
+                </div>
+                <h3 class="card-article__title">${item.title}</h3>
+                <p class="card-article__excerpt">${item.paragraphs[0].slice(0, 100)}...</p>
+                <a href="detail-blog.html?id=${key}" class="card-article__link">Baca Selengkapnya &rarr;</a>
+              </div>
+            </article>
+          `;
+        }).join('');
+
+        // Related Cards entrance transition scroll trigger
+        if ('IntersectionObserver' in window) {
+          const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('card-visible');
+                cardObserver.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+          document.querySelectorAll('.card-article').forEach((card, index) => {
+            card.style.transitionDelay = `${index * 0.12}s`;
+            cardObserver.observe(card);
+          });
+        } else {
+          document.querySelectorAll('.card-article').forEach(card => {
+            card.classList.add('card-visible');
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
