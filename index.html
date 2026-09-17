@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css?v=3.0" />
   <style>
     /* Clean, hardware-accelerated smooth lift-up transitions */
-    #usaha-grid #card-pt-bintang,
+    #usaha-grid #card-whatowear,
     #usaha-grid article,
     #usaha-grid #card-taste-of-unj,
     #artikel #article-featured,
@@ -21,7 +21,7 @@
       will-change: transform;
     }
 
-    #usaha-grid #card-pt-bintang:hover,
+    #usaha-grid #card-whatowear:hover,
     #usaha-grid article:hover,
     #usaha-grid #card-taste-of-unj:hover,
     #artikel #article-featured:hover,
@@ -33,7 +33,7 @@
     }
 
     /* Smooth Image Zoom transitions */
-    #usaha-grid #card-pt-bintang img,
+    #usaha-grid #card-whatowear img,
     #usaha-grid article img,
     #artikel #article-featured img,
     #article-sm-1 img,
@@ -41,8 +41,8 @@
       transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
     }
 
-    #usaha-grid #card-pt-bintang:hover img {
-      transform: scale(1.18) !important;
+    #usaha-grid #card-whatowear:hover img {
+      transform: scale(1.08) !important;
     }
 
     #usaha-grid article:hover img,
@@ -86,7 +86,7 @@
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid {
         display: contents !important;
       }
-      #usaha-grid > .container > div.home-biz-grid #card-pt-bintang,
+      #usaha-grid > .container > div.home-biz-grid #card-whatowear,
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article {
         flex: 0 0 82% !important;
         scroll-snap-align: start !important;
@@ -100,7 +100,7 @@
       }
 
       /* Image container inside row cards */
-      #usaha-grid > .container > div.home-biz-grid #card-pt-bintang > div:first-child,
+      #usaha-grid > .container > div.home-biz-grid #card-whatowear > div:first-child,
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article > div:first-child {
         width: 36% !important;
         min-height: 180px !important;
@@ -108,7 +108,7 @@
         flex-shrink: 0 !important;
       }
       
-      #usaha-grid > .container > div.home-biz-grid #card-pt-bintang > div:first-child img,
+      #usaha-grid > .container > div.home-biz-grid #card-whatowear > div:first-child img,
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article > div:first-child img {
         width: 100% !important;
         height: 100% !important;
@@ -118,7 +118,7 @@
       }
 
       /* Text details container inside row cards */
-      #usaha-grid > .container > div.home-biz-grid #card-pt-bintang > div:last-child,
+      #usaha-grid > .container > div.home-biz-grid #card-whatowear > div:last-child,
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article > div:last-child {
         padding: 10px 12px !important;
         display: flex !important;
@@ -129,7 +129,7 @@
         min-width: 0 !important;
       }
 
-      #usaha-grid > .container > div.home-biz-grid #card-pt-bintang h3,
+      #usaha-grid > .container > div.home-biz-grid #card-whatowear h3,
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article h3,
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article div:last-child > p:first-child {
         font-size: 14px !important;
@@ -142,7 +142,7 @@
         color: #111827 !important;
       }
 
-      #usaha-grid > .container > div.home-biz-grid #card-pt-bintang p,
+      #usaha-grid > .container > div.home-biz-grid #card-whatowear p,
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article p {
         font-size: 11px !important;
         line-height: 1.35 !important;
@@ -156,7 +156,7 @@
       }
 
       /* Hide giant detail buttons on mobile row layout */
-      #usaha-grid > .container > div.home-biz-grid #card-pt-bintang a,
+      #usaha-grid > .container > div.home-biz-grid #card-whatowear a,
       #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article a {
         display: none !important;
       }
@@ -411,22 +411,22 @@
           </div> <!-- Grid: foto nasi besar kiri | sub-grid 2-col kanan -->
           <div class="home-biz-grid" style="display:grid; grid-template-columns:1.15fr 1fr; gap:16px; align-items:stretch;">
 
-            <!-- LEFT: PT. Bintang Tridaya Sukses (Besar Kiri - Logo Max Super Big) -->
-            <div id="card-pt-bintang" onclick="window.location.href='detail-usaha.html?id=pt-bintang-tridaya-sukses'"
+            <!-- LEFT: Whatowear.id (Besar Kiri) -->
+            <div id="card-whatowear" onclick="window.location.href='detail-usaha.html?id=whatowear'"
               style="background:rgba(255, 255, 255, 0.95); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-card); display:flex; flex-direction:column; cursor:pointer;">
-              <!-- Image area (100% Full Shape Edge-to-Edge) -->
-              <div style="position:relative; flex:1; min-height:440px; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:0;">
-                <img src="images/logos/pt_bintang_tridaya_sukses.png" alt="PT. Bintang Tridaya Sukses"
-                  style="width:100%; height:100%; max-height:440px; object-fit:cover; display:block;" />
+              <!-- Image area -->
+              <div style="position:relative; flex:1; min-height:440px; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:32px 24px;">
+                <img src="images/logos/whatowear.png" alt="Whatowear.id"
+                  style="width:100%; height:100%; max-height:360px; object-fit:contain; display:block;" />
               </div>
               <!-- Text & Button -->
               <div style="padding:18px 20px; background:rgba(255,255,255,0.95); display:flex; flex-direction:column; gap:8px;">
                 <h3 style="font-family:'Montserrat',sans-serif; font-size:18px; font-weight:800; color:#111827; margin:0;">
-                  PT. Bintang Tridaya Sukses</h3>
+                  Whatowear.id</h3>
                 <p style="font-size:13px; color:#4b5563; line-height:1.5; margin:0;">
-                  General trading dan supplier material packaging, pallet, box karton, dan Box PP.
+                  Brand modest fashion asal Indonesia yang menghadirkan hijab premium dan essential pieces berdesain timeless.
                 </p>
-                <a href="detail-usaha.html?id=pt-bintang-tridaya-sukses" class="btn-outline" id="btn-pt-bintang-detail"
+                <a href="detail-usaha.html?id=whatowear" class="btn-outline" id="btn-whatowear-detail"
                   style="width:100%; text-align:center; display:block; border-radius:var(--radius-full); margin-top:4px;">Lihat Detail</a>
               </div>
             </div>
