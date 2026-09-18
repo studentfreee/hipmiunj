@@ -21,7 +21,7 @@ const businessesData = {
     "title": "PT. Persada Raya Sentosa",
     "category": "Lainnya",
     "categoryClass": "lainnya",
-    "ownerName": "Rasya Adityaputra Rizal",
+    "ownerName": "Rasya Adityaputra Rizal & Arfan Prawirayudha",
     "ownerRole": "Staf Bidang II",
     "ownerAvatar": "images/default-avatar.png",
     "mainImage": "images/logos/pt_persada_raya_sentosa.jpg",
@@ -29,7 +29,7 @@ const businessesData = {
       "images/logos/pt_persada_raya_sentosa.jpg"
     ],
     "shortDesc": "PT. Persada Raya Sentosa adalah perusahaan general trading dan penyedia solusi pengemasan industri (industrial packaging) profesional yang berkantor pusat di MH Thamrin, Jakarta Pusat.",
-    "longDesc": "PT. Persada Raya Sentosa adalah perusahaan berskala nasional yang bergerak di bidang general trading dan solusi pengemasan industri (industrial packaging). Berkantor pusat di Gedung Jaya Lt. 9, Jl. MH Thamrin, Jakarta Pusat dan memiliki cabang logistik strategis di Grandwisata Tambun Bekasi, PT. Persada Raya Sentosa berfokus memberikan pasokan produk pengemasan industri yang andal, berkualitas, dan profesional untuk menunjang kebutuhan berbagai sektor industri manufaktur.",
+    "longDesc": "PT. Persada Raya Sentosa adalah perusahaan berskala nasional yang bergerak di bidang IT Services, System Integrator, dan penyedia solusi teknologi (Technology Solution Provider). Berkantor pusat di Gedung Jaya Lt. 9, Jl. MH Thamrin, Jakarta Pusat dan memiliki kantor cabang di Grandwisata Tambun, Bekasi, PT. Persada Raya Sentosa berfokus memberikan solusi transformasi digital end-to-end yang andal, berkualitas, dan profesional untuk menunjang kebutuhan sektor enterprise, pemerintah, BUMN, manufaktur, hingga pertambangan.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6287700051700",
     "pdfUrl": "Company Profile (1).pdf"

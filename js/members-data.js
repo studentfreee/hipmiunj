@@ -22,7 +22,7 @@ const membersData = {
     description: "Menjadi pendorong utama ekosistem wirausaha mahasiswa melalui pendampingan UMKM binaan, inkubasi ide startup inovatif, serta pemberdayaan ekonomi kreatif digital.",
     ketua: { name: "Muhammad Ngizzuddin", role: "Kepala Bidang II", image: "images/members/Muhammad_Ngizzuddin_Kepala_Bidang_II-Ekonomi,_UMKM,_Pengembangan_Startup_and_Ekraf.png" },
     wakil: [
-      { name: "Nahdlatul Tsauriah Tauhidiah", role: "Kepala Kompartemen Ekonomi", image: "images/members/Nahdlatul_Tsauriah_Tauhidiah_Kepala_Kompartemen_EkonomiBidang_II.png" },
+      { name: "Nahdlatus Tsauriah Tauhidiah", role: "Kepala Kompartemen Ekonomi", image: "images/members/Nahdlatul_Tsauriah_Tauhidiah_Kepala_Kompartemen_EkonomiBidang_II.png" },
       { name: "Budiman", role: "Kepala Kompartemen UMKM", image: "images/members/Budiman_Kepala_Kompartemen_UMKMBidang_II.png" },
       { name: "Galuh Sinuaji", role: "Kepala Kompartemen Pengembangan Startup & Ekraf", image: "images/members/Galuh_Sinuaji_Kepala_Kompartemen_Pengembangan_Startup_and_EkrafBidang_II.png" }
     ],
