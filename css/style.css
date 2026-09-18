@@ -2814,26 +2814,37 @@ button {
     max-width: none;
   }
 
+  .search-filter-bar,
   .page-header-wrapper .search-filter-bar {
-    padding: 14px;
-    border-radius: 20px;
-    border-color: rgba(252, 212, 2, 0.2);
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 14px !important;
+    border-radius: 20px !important;
+    border-color: rgba(252, 212, 2, 0.2) !important;
   }
 
   .search-input-wrap {
-    min-width: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
   }
 
   .search-input {
-    font-size: 15px;
+    width: 100% !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
   }
 
   .filter-chips {
-    gap: 8px;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
+    width: 100% !important;
+    display: flex !important;
+    gap: 8px !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    padding-bottom: 4px !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   .chip {
