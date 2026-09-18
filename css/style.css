@@ -2790,8 +2790,8 @@ button {
   .org-section,
   .similar-section,
   .detail-page > .container {
-    margin: 12px 12px 0;
-    border-radius: 24px;
+    margin: 0 !important;
+    border-radius: 0 !important;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.72);
     box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
@@ -3232,8 +3232,8 @@ button {
   }
 
   .footer {
-    margin: 12px 12px 0;
-    border-radius: 24px 24px 0 0;
+    margin: 0 !important;
+    border-radius: 0 !important;
     padding: 28px 0 18px;
   }
 
