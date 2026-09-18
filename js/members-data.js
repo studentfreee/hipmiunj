@@ -5,8 +5,8 @@ const membersData = {
     ketua: { name: "Mochamad Adzka Rahman", role: "Kepala Bidang I", image: "images/members/Mochamad_Adzka_Rahman_Kepala_Bidang_I___Organisasi,_Keanggotaan_and_Kaderisasi.png" },
     wakil: [
       { name: "Galang Hikmal Silalahi", role: "Kepala Kompartemen Organisasi", image: "images/members/Galang_Hikmal_Silalahi_Kepala_Kompartemen_Organisasi_Bidang_I.png" },
-      { name: "Khalisa Bunga Maheswari", role: "Kepala Kompartemen Keanggotaan", image: "images/members/Khalisa_Bunga_Maheswari_Kepala_Kompartemen_Keanggotaan_Bidang_I.png" },
-      { name: "Dewi Nurhikmah", role: "Kepala Kompartemen Kaderisasi", image: "images/members/Dewi_Nurhikmah_Kepala_Kompartemen_KaderisasiBidang_I.png" }
+      { name: "Dewi Nurhikmah", role: "Kepala Kompartemen Kaderisasi", image: "images/members/Dewi_Nurhikmah_Kepala_Kompartemen_KaderisasiBidang_I.png" },
+      { name: "Khalisa Bunga Maheswari", role: "Kepala Kompartemen Keanggotaan", image: "images/members/Khalisa_Bunga_Maheswari_Kepala_Kompartemen_Keanggotaan_Bidang_I.png" }
     ],
     anggota: [
       { name: "Moch Royhaan Rasyadasyah Chanafi", role: "Staf Bidang I", image: "images/default-avatar.png" },
@@ -112,7 +112,7 @@ const membersData = {
       { name: "Zacky Hafidz Alfadli", role: "Staf Bidang VI", image: "images/members/Zacky_Hafidz_Alfadli.png" },
       { name: "Ridho Kamal", role: "Staf Bidang VI", image: "images/default-avatar.png" },
       { name: "Muthia Devi", role: "Staf Bidang VI", image: "images/members/Muthia_Devi.png" },
-      { name: "Indri Nuraeni", role: "Staf Bidang VI", image: "images/default-avatar.png" },
+      { name: "naura syifa", role: "Staf Bidang VI", image: "images/default-avatar.png" },
       { name: "Muhammad Hanif Al Farizi", role: "Staf Bidang VI", image: "images/members/Muhammad_Hanif_Al_Farizi.png" }
     ]
   }
