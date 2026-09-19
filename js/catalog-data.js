@@ -126,7 +126,7 @@ const businessesData = {
     "title": "Box and Bites",
     "category": "Food & Beverage",
     "categoryClass": "fnb",
-    "ownerName": "Aditya Pratama Nugroho Widagdo",
+    "ownerName": "Aditya Pratama Nugroho Widagdo & Arfan Prawirayudha",
     "ownerRole": "Staf Bidang VI",
     "ownerAvatar": "images/default-avatar.png",
     "mainImage": "images/logos/box_and_bites.jpg",
