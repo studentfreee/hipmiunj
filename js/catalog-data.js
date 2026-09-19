@@ -21,7 +21,7 @@ const businessesData = {
     "title": "PT. Persada Raya Sentosa",
     "category": "Lainnya",
     "categoryClass": "lainnya",
-    "ownerName": "Rasya Adityaputra Rizal & Arfan Prawirayudha",
+    "ownerName": "Rasya Adityaputra Rizal",
     "ownerRole": "Staf Bidang II",
     "ownerAvatar": "images/default-avatar.png",
     "mainImage": "images/logos/pt_persada_raya_sentosa.jpg",
