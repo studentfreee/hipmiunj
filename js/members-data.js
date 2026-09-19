@@ -9,12 +9,12 @@ const membersData = {
       { name: "Khalisa Bunga Maheswari", role: "Kepala Kompartemen Keanggotaan", image: "images/members/Khalisa_Bunga_Maheswari_Kepala_Kompartemen_Keanggotaan_Bidang_I.png" }
     ],
     anggota: [
-      { name: "Moch Royhaan Rasyadasyah Chanafi", role: "Staf Bidang I", image: "images/default-avatar.png" },
-      { name: "Putri Dwi", role: "Staf Bidang I", image: "images/default-avatar.png" },
-      { name: "Revilina Erdiyanti", role: "Staf Bidang I", image: "images/default-avatar.png" },
-      { name: "Rizki Prasetio", role: "Staf Bidang I", image: "images/default-avatar.png" },
-      { name: "Fadiyah Algamar", role: "Staf Bidang I", image: "images/default-avatar.png" },
-      { name: "Aqila Mumtaza", role: "Staf Bidang I", image: "images/default-avatar.png" }
+      { name: "Moch Rayhaan Rasyadsyah Chanafi", role: "Staf Bidang I", image: "images/members/Moch_Rayhaan_Rasyadsyah_Chanafi_Staff_Bidang_I.png" },
+      { name: "Putri Dwi", role: "Staf Bidang I", image: "images/members/Putri_Dwi_Staff_Bidang_I.png" },
+      { name: "Revilina Erdiyanti", role: "Staf Bidang I", image: "images/members/Revilina_Erdiyanti_Staff_Bidang_I.png" },
+      { name: "Rizki Prasetio", role: "Staf Bidang I", image: "images/members/Rizki_Prasetio_Staff_Bidang_I.png" },
+      { name: "Fadiyah Algamar", role: "Staf Bidang I", image: "images/members/Fadiyah_Algamar_Staff_Bidang_I.png" },
+      { name: "Aqila Mumtaza", role: "Staf Bidang I", image: "images/members/Aqila_Mumtaza_Staff_Bidang_I.png" }
     ]
   },
   bidang2: {
