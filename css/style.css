@@ -3409,9 +3409,9 @@ button {
 
   background-color: #f3f4f6;
   background-image:
-    radial-gradient(95% 55% at 85% 18%, rgba(252, 212, 2, 0.38) 0%, transparent 60%),
-    radial-gradient(90% 55% at 12% 65%, rgba(209, 213, 219, 0.85) 0%, transparent 65%),
-    linear-gradient(180deg, #ffffff 0%, #e5e7eb 25%, #fffdf0 55%, #e2e8f0 82%, #ffffff 100%);
+    radial-gradient(95% 55% at 85% 18%, rgba(0, 99, 97, 0.35) 0%, transparent 60%),
+    radial-gradient(90% 55% at 12% 65%, rgba(0, 99, 97, 0.20) 0%, transparent 65%),
+    linear-gradient(180deg, #ffffff 0%, #e6f4f3 25%, #cdeceb 55%, #e0f2f1 82%, #ffffff 100%);
   background-blend-mode: normal, normal, normal;
   color: #1f2937;
 }
@@ -3442,8 +3442,8 @@ button {
 #usaha-grid {
   position: relative;
   background:
-    radial-gradient(100% 75% at 85% 25%, rgba(252, 212, 2, 0.42) 0%, transparent 65%),
-    linear-gradient(180deg, #ffffff 0%, #fffdf2 45%, #fffce5 100%) !important;
+    radial-gradient(100% 75% at 85% 25%, rgba(0, 99, 97, 0.38) 0%, transparent 65%),
+    linear-gradient(180deg, #ffffff 0%, #e6f4f3 45%, #cdeceb 100%) !important;
   z-index: 3;
 }
 
@@ -3805,19 +3805,26 @@ button {
   color: #1f2937;
 }
 
-/* Section 1: Hero Sejarah (Gradien Putih & Kuning CTA Asli + Background Gedung UNJ Full 1 Section) */
+/* Section 1: Hero Sejarah (Full View Original Color Landmark UNJ) */
 .about-light-flow .about-hero {
   position: relative;
   background-color: #ffffff;
-  background-image:
-    radial-gradient(100% 75% at 85% 25%, rgba(252, 212, 2, 0.42) 0%, transparent 65%),
-    linear-gradient(180deg, #ffffff 0%, #fffdf2 45%, #fffce5 100%) !important;
   border: none !important;
   overflow: hidden;
 }
 
 .about-light-flow .about-hero::before {
-  display: none !important;
+  content: "";
+  display: block !important;
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/unj_landmark_hero.jpeg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: 1 !important;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .about-light-flow .about-hero::after {
