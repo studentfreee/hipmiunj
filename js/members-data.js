@@ -107,7 +107,7 @@ const membersData = {
     ],
     anggota: [
       { name: "Noval", role: "Staf Bidang VI", image: "images/members/Noval.png" },
-      { name: "Danang Gilar Sambudi", role: "Staf Bidang VI", image: "images/default-avatar.png" },
+      { name: "Danang Gilar Sambudi", role: "Staf Bidang VI", image: "images/members/Danang_Gilar_Sambudi_Staff_Bidang_VI.png" },
       { name: "Aditya Pratama Nugroho Widagdo", role: "Staf Bidang VI", image: "images/members/Aditya_Pratama_Nugroho_Widagdo.png" },
       { name: "Zacky Hafidz Alfadli", role: "Staf Bidang VI", image: "images/members/Zacky_Hafidz_Alfadli.png" },
       { name: "Ridho Kamal", role: "Staf Bidang VI", image: "images/default-avatar.png" },
