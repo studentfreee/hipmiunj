@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="images/hipmi_pt_unj_logo.png" />
   <meta name="description"
     content="Katalisator inovasi dan kewirausahaan di Universitas Negeri Jakarta. Kami membangun ekosistem bisnis yang profesional, prestisius, dan dinamis." />
-  <link rel="stylesheet" href="css/style.css?v=3.0" />
+  <link rel="stylesheet" href="css/style.css?v=3.9" />
   <style>
     /* Clean, hardware-accelerated smooth lift-up transitions */
     #usaha-grid #card-whatowear,
@@ -28,8 +28,8 @@
     #article-sm-1:hover,
     #article-sm-2:hover {
       transform: translateY(-6px) !important;
-      border-color: #fcd402 !important;
-      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1), 0 0 15px rgba(252, 212, 2, 0.2) !important;
+      border-color: #0b5e2b !important;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08), 0 0 15px rgba(11, 94, 43, 0.18) !important;
     }
 
     /* Smooth Image Zoom transitions */
@@ -54,6 +54,7 @@
 
     /* MOBILE RESPONSIVE OVERRIDES (WIREFRAME SPEC) */
     @media (max-width: 768px) {
+
       /* Hide Top Hamburger & Mobile Menu (Replaced by Bottom Dock) */
       .navbar__actions,
       .navbar__toggle,
@@ -75,7 +76,7 @@
       }
 
       /* Highlight Bisnis Horizontal Scroll Swipe Row */
-      #usaha-grid > .container > div.home-biz-grid {
+      #usaha-grid>.container>div.home-biz-grid {
         display: flex !important;
         flex-direction: row !important;
         overflow-x: auto !important;
@@ -84,11 +85,13 @@
         padding: 8px 4px 16px !important;
         -webkit-overflow-scrolling: touch !important;
       }
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid {
+
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid {
         display: contents !important;
       }
-      #usaha-grid > .container > div.home-biz-grid #card-whatowear,
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article {
+
+      #usaha-grid>.container>div.home-biz-grid #card-whatowear,
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article {
         flex: 0 0 82% !important;
         scroll-snap-align: start !important;
         min-width: 82% !important;
@@ -101,16 +104,16 @@
       }
 
       /* Image container inside row cards */
-      #usaha-grid > .container > div.home-biz-grid #card-whatowear > div:first-child,
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article > div:first-child {
+      #usaha-grid>.container>div.home-biz-grid #card-whatowear>div:first-child,
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article>div:first-child {
         width: 36% !important;
         min-height: 180px !important;
         height: 180px !important;
         flex-shrink: 0 !important;
       }
-      
-      #usaha-grid > .container > div.home-biz-grid #card-whatowear > div:first-child img,
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article > div:first-child img {
+
+      #usaha-grid>.container>div.home-biz-grid #card-whatowear>div:first-child img,
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article>div:first-child img {
         width: 100% !important;
         height: 100% !important;
         max-height: none !important;
@@ -119,8 +122,8 @@
       }
 
       /* Text details container inside row cards */
-      #usaha-grid > .container > div.home-biz-grid #card-whatowear > div:last-child,
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article > div:last-child {
+      #usaha-grid>.container>div.home-biz-grid #card-whatowear>div:last-child,
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article>div:last-child {
         padding: 10px 12px !important;
         display: flex !important;
         flex-direction: column !important;
@@ -130,9 +133,9 @@
         min-width: 0 !important;
       }
 
-      #usaha-grid > .container > div.home-biz-grid #card-whatowear h3,
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article h3,
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article div:last-child > p:first-child {
+      #usaha-grid>.container>div.home-biz-grid #card-whatowear h3,
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article h3,
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article div:last-child>p:first-child {
         font-size: 14px !important;
         font-weight: 800 !important;
         margin: 0 !important;
@@ -143,8 +146,8 @@
         color: #111827 !important;
       }
 
-      #usaha-grid > .container > div.home-biz-grid #card-whatowear p,
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article p {
+      #usaha-grid>.container>div.home-biz-grid #card-whatowear p,
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article p {
         font-size: 11px !important;
         line-height: 1.35 !important;
         margin: 0 !important;
@@ -157,8 +160,8 @@
       }
 
       /* Hide giant detail buttons on mobile row layout */
-      #usaha-grid > .container > div.home-biz-grid #card-whatowear a,
-      #usaha-grid > .container > div.home-biz-grid > div.home-biz-subgrid article a {
+      #usaha-grid>.container>div.home-biz-grid #card-whatowear a,
+      #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article a {
         display: none !important;
       }
 
@@ -238,16 +241,16 @@
       }
 
       /* Image container inside small article cards */
-      #artikel .home-articles-grid #article-sm-1 > div:first-child,
-      #artikel .home-articles-grid #article-sm-2 > div:first-child {
+      #artikel .home-articles-grid #article-sm-1>div:first-child,
+      #artikel .home-articles-grid #article-sm-2>div:first-child {
         width: 36% !important;
         height: 180px !important;
         flex-shrink: 0 !important;
       }
 
       /* Text container inside small article cards */
-      #artikel .home-articles-grid #article-sm-1 > div:last-child,
-      #artikel .home-articles-grid #article-sm-2 > div:last-child {
+      #artikel .home-articles-grid #article-sm-1>div:last-child,
+      #artikel .home-articles-grid #article-sm-2>div:last-child {
         padding: 10px 12px !important;
         display: flex !important;
         flex-direction: column !important;
@@ -361,7 +364,7 @@
          HERO SECTION
          ================================================ -->
     <section class="hero" id="hero" aria-label="Beranda Hero">
-      <div class="hero__bg" style="background-image: url('images/hero.JPG')"></div>
+      <div class="hero__bg" style="background-image: url('images/5.jpeg')"></div>
       <div class="hero__overlay"></div>
       <div class="hero__content">
         <p class="hero__eyebrow">Himpunan Pengusaha Muda Indonesia</p>
@@ -395,45 +398,47 @@
            BUSINESS GRID (SECTION 2)
            ================================================ -->
       <section class="section" id="usaha-grid" aria-label="Katalog Usaha Mahasiswa">
-        <!-- 3 Background Transparent Logos -->
-        <img src="images/hipmi_pt_unj_logo.png" alt="" aria-hidden="true" class="section-bg-logo bg-logo-1" />
-        <img src="images/hipmi_pt_unj_logo.png" alt="" aria-hidden="true" class="section-bg-logo bg-logo-2" />
-        <img src="images/hipmi_pt_unj_logo.png" alt="" aria-hidden="true" class="section-bg-logo bg-logo-3" />
-
         <div class="container">
           <div class="flex-between mb-3">
             <div class="section-header" style="margin-bottom:0;">
-              <p style="font-size:15px; color:#374151; max-width:420px; line-height:1.6;">
+              <p style="font-size:15px; max-width:420px; line-height:1.6;">
                 Temukan inovasi cemerlang dari anggota kami. Dari kuliner nusantara hingga solusi teknologi masa depan,
                 mari dukung wirausaha muda UNJ.
               </p>
             </div>
-            <a href="usaha.html" class="link-more" id="btn-semua-usaha" style="color:#006361; font-weight:700;">Lihat Semua Usaha &rarr;</a>
+            <a href="usaha.html" class="link-more" id="btn-semua-usaha">Lihat Semua Usaha &rarr;</a>
           </div> <!-- Grid: foto nasi besar kiri | sub-grid 2-col kanan -->
-          <div class="home-biz-grid" style="display:grid; grid-template-columns:1.15fr 1fr; gap:16px; align-items:stretch;">
+          <div class="home-biz-grid"
+            style="display:grid; grid-template-columns:1.15fr 1fr; gap:16px; align-items:stretch;">
 
             <!-- LEFT: Whatowear.id (Besar Kiri) -->
             <div id="card-whatowear" onclick="window.location.href='detail-usaha.html?id=whatowear'"
               style="background:rgba(255, 255, 255, 0.95); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-card); display:flex; flex-direction:column; cursor:pointer;">
               <!-- Image area -->
-              <div style="position:relative; flex:1; min-height:440px; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:32px 24px;">
+              <div
+                style="position:relative; flex:1; min-height:440px; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:32px 24px;">
                 <img src="images/logos/whatowear.png" alt="Whatowear.id"
                   style="width:100%; height:100%; max-height:360px; object-fit:contain; display:block;" />
               </div>
               <!-- Text & Button -->
-              <div style="padding:18px 20px; background:rgba(255,255,255,0.95); display:flex; flex-direction:column; gap:8px;">
-                <h3 style="font-family:'Montserrat',sans-serif; font-size:18px; font-weight:800; color:#111827; margin:0;">
+              <div
+                style="padding:18px 20px; background:rgba(255,255,255,0.95); display:flex; flex-direction:column; gap:8px;">
+                <h3
+                  style="font-family:'Montserrat',sans-serif; font-size:18px; font-weight:800; color:#111827; margin:0;">
                   Whatowear.id</h3>
                 <p style="font-size:13px; color:#4b5563; line-height:1.5; margin:0;">
-                  Brand modest fashion asal Indonesia yang menghadirkan hijab premium dan essential pieces berdesain timeless.
+                  Brand modest fashion asal Indonesia yang menghadirkan hijab premium dan essential pieces berdesain
+                  timeless.
                 </p>
                 <a href="detail-usaha.html?id=whatowear" class="btn-outline" id="btn-whatowear-detail"
-                  style="width:100%; text-align:center; display:block; border-radius:var(--radius-full); margin-top:4px;">Lihat Detail</a>
+                  style="width:100%; text-align:center; display:block; border-radius:var(--radius-full); margin-top:4px;">Lihat
+                  Detail</a>
               </div>
             </div>
 
             <!-- RIGHT: Sub-grid (Umamiya, Mi-Chi, Fresh Meat Supply) -->
-            <div class="home-biz-subgrid" style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:14px;">
+            <div class="home-biz-subgrid"
+              style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:14px;">
 
               <!-- Umamiya (top-left) -->
               <article
@@ -443,11 +448,13 @@
                   <img src="images/logos/umamiya.jpg" alt="Umamiya"
                     style="width:100%; height:100%; object-fit:cover;" />
                 </div>
-                <div style="padding:14px; display:flex; flex-direction:column; flex:1; justify-content:center; gap:6px;">
+                <div
+                  style="padding:14px; display:flex; flex-direction:column; flex:1; justify-content:center; gap:6px;">
                   <p
                     style="font-family:'Montserrat',sans-serif; font-size:15px; font-weight:800; color:#111827; margin:0;">
                     Umamiya</p>
-                  <p style="font-size:12px; color:#4b5563; line-height:1.5; margin:0;">Usaha kuliner dimsum goreng keju lezat dan camilan favorit.</p>
+                  <p style="font-size:12px; color:#4b5563; line-height:1.5; margin:0;">Usaha kuliner dimsum goreng keju
+                    lezat dan camilan favorit.</p>
                   <a href="detail-usaha.html?id=umamiya" class="btn-outline btn-sm" id="btn-umamiya"
                     style="width:100%; text-align:center; border-radius:var(--radius-full);">Lihat Detail</a>
                 </div>
@@ -457,14 +464,17 @@
               <article
                 style="background:rgba(255, 255, 255, 0.95); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-card); display:flex; flex-direction:column;"
                 id="card-mi-chi">
-                <div style="position:relative; aspect-ratio:4/3; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center;">
+                <div
+                  style="position:relative; aspect-ratio:4/3; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center;">
                   <img src="images/logos/mi_chi.png" alt="Mi-Chi" style="width:100%; height:100%; object-fit:cover;" />
                 </div>
-                <div style="padding:14px; display:flex; flex-direction:column; flex:1; justify-content:center; gap:6px;">
+                <div
+                  style="padding:14px; display:flex; flex-direction:column; flex:1; justify-content:center; gap:6px;">
                   <p
                     style="font-family:'Montserrat',sans-serif; font-size:15px; font-weight:800; color:#111827; margin:0;">
                     Mi-Chi</p>
-                  <p style="font-size:12px; color:#4b5563; line-height:1.5; margin:0;">Camilan berkualitas buatan dapur rumahan rasa autentik.</p>
+                  <p style="font-size:12px; color:#4b5563; line-height:1.5; margin:0;">Camilan berkualitas buatan dapur
+                    rumahan rasa autentik.</p>
                   <a href="detail-usaha.html?id=mi-chi" class="btn-outline btn-sm" id="btn-michi"
                     style="width:100%; text-align:center; border-radius:var(--radius-full);">Lihat Detail</a>
                 </div>
@@ -474,7 +484,8 @@
               <article
                 style="grid-column:span 2; background:rgba(255, 255, 255, 0.95); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-card); display:flex;"
                 id="card-fresh-beef">
-                <div style="position:relative; width:42%; flex-shrink:0; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center;">
+                <div
+                  style="position:relative; width:42%; flex-shrink:0; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center;">
                   <img src="images/logos/fresh_meat_supply.png" alt="Fresh Meat Supply"
                     style="width:100%; height:100%; object-fit:cover;" />
                 </div>
@@ -483,9 +494,11 @@
                   <p
                     style="font-family:'Montserrat',sans-serif; font-size:17px; font-weight:800; color:#111827; margin:0;">
                     Fresh Meat Supply</p>
-                  <p style="font-size:13px; color:#4b5563; line-height:1.5; margin:0;">Penjualan daging sapi segar berkualitas, higienis, halal, dan aman dikonsumsi.</p>
+                  <p style="font-size:13px; color:#4b5563; line-height:1.5; margin:0;">Penjualan daging sapi segar
+                    berkualitas, higienis, halal, dan aman dikonsumsi.</p>
                   <a href="detail-usaha.html?id=fresh-meat-supply" class="btn-outline btn-sm" id="btn-fresh-beef"
-                    style="align-self:flex-start; border-radius:var(--radius-full); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">Lihat Detail</a>
+                    style="align-self:flex-start; border-radius:var(--radius-full); text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">Lihat
+                    Detail</a>
                 </div>
               </article>
 
@@ -504,7 +517,8 @@
             <p>Insights, liputan acara, dan tips berharga seputar dunia kewirausahaan dari kacamata anggota kami.</p>
           </div>
 
-          <div class="home-articles-grid" style="display:grid; grid-template-columns:1.4fr 1fr; gap:20px; align-items:stretch;">
+          <div class="home-articles-grid"
+            style="display:grid; grid-template-columns:1.4fr 1fr; gap:20px; align-items:stretch;">
 
             <!-- LEFT: Featured article card (image + overlay + content) -->
             <article id="article-featured" onclick="window.location.href='detail-blog.html?id=pitching-day-2024'"
@@ -515,9 +529,10 @@
               <div class="article-featured-overlay"
                 style="position:absolute; inset:0; background:linear-gradient(to top, rgba(0,10,30,0.92) 0%, rgba(0,10,30,0.55) 50%, rgba(0,10,30,0.15) 100%);">
               </div>
-              <div class="article-featured-text-overlay" style="position:absolute; bottom:0; left:0; right:0; padding:28px 32px;">
+              <div class="article-featured-text-overlay"
+                style="position:absolute; bottom:0; left:0; right:0; padding:28px 32px;">
                 <p
-                  style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:var(--color-gold); margin-bottom:10px;">
+                  style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#54e6dd; margin-bottom:10px;">
                   Liputan Acara</p>
                 <h3
                   style="font-family:'Montserrat',sans-serif; font-size:22px; font-weight:700; color:#fff; line-height:1.3; margin-bottom:10px;">
@@ -526,7 +541,7 @@
                   cemerlang dipresentasikan. Mari lihat ide-ide startup mana saja yang berhasil mencuri perhatian para
                   juri tahun ini.</p>
                 <a href="detail-blog.html?id=pitching-day-2024" id="btn-baca-featured"
-                  style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:var(--color-gold); display:inline-flex; align-items:center; gap:4px; transition:var(--transition);">
+                  style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#ffffff; display:inline-flex; align-items:center; gap:4px; transition:var(--transition);">
                   Baca Selengkapnya &rsaquo;
                 </a>
               </div>
@@ -535,10 +550,13 @@
                 <img src="images/article-pitching.jpg" alt="Rekap Pitching Day 2024"
                   style="width:100%; height:100%; object-fit:cover; display:block;" />
               </div>
-              <div class="article-featured-mobile-text" style="display:none; padding:10px 12px; flex-direction:column; justify-content:center; gap:3px; flex:1; min-width:0;">
-                <p style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--on-surface-variant); margin:0;">
+              <div class="article-featured-mobile-text"
+                style="display:none; padding:10px 12px; flex-direction:column; justify-content:center; gap:3px; flex:1; min-width:0;">
+                <p
+                  style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--on-surface-variant); margin:0;">
                   Liputan Acara</p>
-                <h3 style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:var(--on-surface); line-height:1.25; margin:0;">
+                <h3
+                  style="font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; color:var(--on-surface); line-height:1.25; margin:0;">
                   Rekap Pitching Day 2024: Inovasi Tanpa Batas</h3>
               </div>
             </article>
@@ -626,7 +644,7 @@
           </p>
           <div class="join-cta__actions" style="gap: 16px;">
             <a href="#" class="btn-primary" id="btn-daftar-sekarang"
-              style="border-radius: var(--radius-full); padding: 14px 38px; font-size: 14px; font-weight: 700; box-shadow: 0 8px 24px rgba(252, 212, 2, 0.25); border: none;">Daftar
+              style="border-radius: var(--radius-full); padding: 14px 38px; font-size: 14px; font-weight: 700; background-color: #006361; color: #ffffff; box-shadow: 0 8px 24px rgba(0, 99, 97, 0.25); border: none;">Daftar
               Sekarang</a>
             <a href="#" class="btn-outline" id="btn-konsultasi"
               style="border-radius: var(--radius-full); padding: 14px 38px; font-size: 14px; font-weight: 700; border: 1px solid var(--color-navy); color: var(--color-navy); background: transparent;">Konsultasi
@@ -716,19 +734,35 @@
   <!-- MOBILE BOTTOM FLOATING NAVIGATION DOCK -->
   <nav class="mobile-bottom-nav" aria-label="Navigasi bawah seluler">
     <a href="index.html" class="mobile-bottom-nav__item active" id="bnav-home">
-      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
       <span>Beranda</span>
     </a>
     <a href="about.html" class="mobile-bottom-nav__item" id="bnav-about">
-      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="16" x2="12" y2="12" />
+        <line x1="12" y1="8" x2="12.01" y2="8" />
+      </svg>
       <span>Tentang</span>
     </a>
     <a href="usaha.html" class="mobile-bottom-nav__item" id="bnav-usaha">
-      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      </svg>
       <span>Usaha</span>
     </a>
     <a href="blog.html" class="mobile-bottom-nav__item" id="bnav-blog">
-      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      <svg class="mobile-bottom-nav__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+        <polyline points="14 2 14 8 20 8" />
+        <line x1="16" y1="13" x2="8" y2="13" />
+        <line x1="16" y1="17" x2="8" y2="17" />
+        <polyline points="10 9 9 9 8 9" />
+      </svg>
       <span>Blog</span>
     </a>
   </nav>
