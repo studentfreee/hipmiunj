@@ -502,7 +502,7 @@ button {
 
 .navbar__brand {
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--color-navy);
   letter-spacing: -0.02em;
@@ -692,9 +692,23 @@ button {
   display: none !important;
 }
 
+/* Subtle, smooth gradient transition between Section 1 (Hero) and Section 2 (#usaha-grid) */
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 150px;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 99, 97, 0.18) 30%, rgba(0, 99, 97, 0.55) 65%, rgba(0, 99, 97, 0.88) 85%, #006361 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
 .hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   text-align: center;
   color: #fff;
   max-width: 700px;
@@ -2738,8 +2752,9 @@ button {
   }
 
   .navbar__brand {
-    font-size: 15px;
+    font-size: clamp(11.5px, 3.5vw, 13.5px);
     gap: 8px;
+    white-space: nowrap;
   }
 
   .navbar__brand-logo {
@@ -2762,6 +2777,10 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .hero::after {
+    height: 60px;
   }
 
   .hero__bg,
