@@ -110,9 +110,9 @@ const membersData = {
       { name: "Danang Gilar Sambudi", role: "Staf Bidang VI", image: "images/members/Danang_Gilar_Sambudi_Staff_Bidang_VI.png" },
       { name: "Aditya Pratama Nugroho Widagdo", role: "Staf Bidang VI", image: "images/members/Aditya_Pratama_Nugroho_Widagdo.png" },
       { name: "Zacky Hafidz Alfadli", role: "Staf Bidang VI", image: "images/members/Zacky_Hafidz_Alfadli.png" },
-      { name: "Ridho Kamal", role: "Staf Bidang VI", image: "images/default-avatar.png" },
+      { name: "Ridho Kamal", role: "Staf Bidang VI", image: "images/members/Ridho_Kamal_Staff_Bidang_VI.png" },
       { name: "Muthia Devi", role: "Staf Bidang VI", image: "images/members/Muthia_Devi.png" },
-      { name: "naura syifa", role: "Staf Bidang VI", image: "images/default-avatar.png" },
+      { name: "Naura Syifa Aghnaya", role: "Staf Bidang VI", image: "images/members/Naura_Syifa_Aghnaya_Staff_Bidang_VI.png" },
       { name: "Muhammad Hanif Al Farizi", role: "Staf Bidang VI", image: "images/members/Muhammad_Hanif_Al_Farizi.png" }
     ]
   }

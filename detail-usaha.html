@@ -723,7 +723,10 @@
       // Update PDF button
       const pdfBtn = document.getElementById('btn-pdf-download');
       if (bizData.pdfUrl) {
-        pdfBtn.href = bizData.pdfUrl;
+        const url = bizData.pdfUrl.startsWith('http') || bizData.pdfUrl.startsWith('raw_documents/')
+          ? bizData.pdfUrl
+          : `raw_documents/${bizData.pdfUrl}`;
+        pdfBtn.href = url;
         pdfBtn.style.display = 'inline-flex';
       } else {
         pdfBtn.style.display = 'none';

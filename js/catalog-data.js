@@ -1,4 +1,22 @@
 const businessesData = {
+  "akra-event-partner": {
+    "title": "Akra Event Partner",
+    "category": "Jasa",
+    "categoryClass": "jasa",
+    "ownerName": "Mochamad Adzka Rachman",
+    "ownerRole": "Kepala Bidang I (Organisasi, Keanggotaan & Kaderisasi)",
+    "ownerAvatar": "images/members/Mochamad_Adzka_Rahman_Kepala_Bidang_I___Organisasi,_Keanggotaan_and_Kaderisasi.png",
+    "mainImage": "images/logos/akra_event_partner.png",
+    "thumbs": [
+      "images/logos/akra_event_partner.png",
+      "images/akra_ht_product.png"
+    ],
+    "shortDesc": "Akra Event Partner (AKRA USAHA) adalah penyedia jasa sewa perlengkapan pendukung acara profesional, melayani sewa Handy Talky (HT) dan solusi teknis event.",
+    "longDesc": "Akra Event Partner (AKRA USAHA) merupakan penyedia jasa sewa perlengkapan pendukung acara yang hadir untuk membantu menciptakan kelancaran dan kesuksesan berbagai kegiatan. Kami menyediakan kebutuhan teknis acara mulai dari komunikasi hingga perlengkapan multimedia dengan layanan yang praktis, profesional, dan terpercaya.\n\nSaat ini, Akra Event Partner menyediakan layanan sewa Handy Talky (HT) untuk mendukung kelancaran komunikasi tim dalam berbagai acara seperti event organizer, seminar, pernikahan, konser, gathering, kegiatan perusahaan, hingga kegiatan lapangan.\n\nKe depannya, Akra Event Partner akan terus mengembangkan layanan dengan menghadirkan berbagai perlengkapan acara lainnya seperti sound system, proyektor, dan kebutuhan teknis event lainnya untuk menjadi solusi lengkap bagi setiap kebutuhan penyelenggaraan acara.",
+    "instagram": "https://instagram.com/akraeventpartner",
+    "whatsapp": "https://wa.me/6281382628900",
+    "pdfUrl": "raw_documents/Company Profile Akra Event Partner.pdf"
+  },
   "pt-amalia-bintang-telur": {
     "title": "PT. Amalia Bintang Telur",
     "category": "Food & Beverage",
