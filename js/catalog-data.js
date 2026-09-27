@@ -369,7 +369,7 @@ const businessesData = {
     "categoryClass": "lainnya",
     "ownerName": "Rizki Prasetio",
     "ownerRole": "Staf Bidang I",
-    "ownerAvatar": "images/default-avatar.png",
+    "ownerAvatar": "images/members/Rizki_Prasetio_Staff_Bidang_I.png",
     "mainImage": "images/logos/sans_diecast.jpg",
     "thumbs": [
       "images/logos/sans_diecast.jpg"
@@ -385,7 +385,7 @@ const businessesData = {
     "categoryClass": "jasa",
     "ownerName": "Rizki Prasetio",
     "ownerRole": "Staf Bidang I",
-    "ownerAvatar": "images/default-avatar.png",
+    "ownerAvatar": "images/members/Rizki_Prasetio_Staff_Bidang_I.png",
     "mainImage": "images/logos/sans_decoration.jpg",
     "thumbs": [
       "images/logos/sans_decoration.jpg"
@@ -401,7 +401,7 @@ const businessesData = {
     "categoryClass": "lainnya",
     "ownerName": "Rizki Prasetio",
     "ownerRole": "Staf Bidang I",
-    "ownerAvatar": "images/default-avatar.png",
+    "ownerAvatar": "images/members/Rizki_Prasetio_Staff_Bidang_I.png",
     "mainImage": "images/logos/kidos_playground.jpg",
     "thumbs": [
       "images/logos/kidos_playground.jpg"
@@ -417,7 +417,7 @@ const businessesData = {
     "categoryClass": "fnb",
     "ownerName": "Rizki Prasetio",
     "ownerRole": "Staf Bidang I",
-    "ownerAvatar": "images/default-avatar.png",
+    "ownerAvatar": "images/members/Rizki_Prasetio_Staff_Bidang_I.png",
     "mainImage": "images/logos/sans_cafe_eatery.jpg",
     "thumbs": [
       "images/logos/sans_cafe_eatery.jpg"
