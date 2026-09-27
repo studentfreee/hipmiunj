@@ -1644,7 +1644,7 @@ button {
 /* Logo reveal wrapper — positions logo + glow ring together */
 .logo-reveal-wrap {
   position: absolute;
-  right: -50px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
