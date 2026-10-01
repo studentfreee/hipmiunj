@@ -53,6 +53,7 @@ const membersData = {
       { name: "Muhammad Firman Zahwan Stya", role: "Staf Bidang III", image: "images/members/Muhammad_Firman_Zahwan_Stya_Staff_Bidang_III.png" },
       { name: "Novita Natalia Sipahutar", role: "Staf Bidang III", image: "images/members/Novita_Natalia_Sipahutar_Staff_Bidang_III.png" },
       { name: "Rizky Ramarif Kuntara", role: "Staf Bidang III", image: "images/members/Rizky_Ramarif_Kuntara_Staff_Bidang_III.png" },
+      { name: "Salsabila Azahra", role: "Staf Bidang III", image: "images/default-avatar.png" },
       { name: "Timothy Meir Amadeus Simarmata", role: "Staf Bidang III", image: "images/members/Timothy_Meir_Amadeus_Simarmata_staff_Bidang_III.png" }
     ]
   },
