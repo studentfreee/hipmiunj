@@ -37,20 +37,20 @@ const businessesData = {
   },
   "pt-persada-raya-sentosa": {
     "title": "PT. Persada Raya Sentosa",
-    "category": "Lainnya",
-    "categoryClass": "lainnya",
+    "category": "Jasa",
+    "categoryClass": "jasa",
     "ownerName": "Rasya Adityaputra Rizal",
     "ownerRole": "Staf Bidang II",
-    "ownerAvatar": "images/default-avatar.png",
+    "ownerAvatar": "images/members/Rasya_Adityaputra_Rizal_Staff_Bidang_II.png",
     "mainImage": "images/logos/pt_persada_raya_sentosa.jpg",
     "thumbs": [
       "images/logos/pt_persada_raya_sentosa.jpg"
     ],
-    "shortDesc": "PT. Persada Raya Sentosa adalah perusahaan general trading dan penyedia solusi pengemasan industri (industrial packaging) profesional yang berkantor pusat di MH Thamrin, Jakarta Pusat.",
+    "shortDesc": "PT. Persada Raya Sentosa adalah perusahaan IT Services, System Integrator, dan penyedia solusi teknologi (Technology Solution Provider) terpercaya untuk transformasi digital enterprise dan instansi.",
     "longDesc": "PT. Persada Raya Sentosa adalah perusahaan berskala nasional yang bergerak di bidang IT Services, System Integrator, dan penyedia solusi teknologi (Technology Solution Provider). Berkantor pusat di Gedung Jaya Lt. 9, Jl. MH Thamrin, Jakarta Pusat dan memiliki kantor cabang di Grandwisata Tambun, Bekasi, PT. Persada Raya Sentosa berfokus memberikan solusi transformasi digital end-to-end yang andal, berkualitas, dan profesional untuk menunjang kebutuhan sektor enterprise, pemerintah, BUMN, manufaktur, hingga pertambangan.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6287700051700",
-    "pdfUrl": "Company Profile (1).pdf"
+    "pdfUrl": "raw_documents/Company Profile (1).pdf"
   },
   "whatowear": {
     "title": "Whatowear.id",
@@ -186,8 +186,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/gian_crafts.jpg"
     ],
-    "shortDesc": "Gian Craft merupakan usaha yang bergerak di bidang kerajinan tangan (kriya seni), khususnya produk rajutan handmade. ...",
-    "longDesc": "Gian Craft merupakan usaha yang bergerak di bidang kerajinan tangan (kriya seni), khususnya produk rajutan handmade. Gian Craft menghasilkan berbagai produk rajut yang dibuat dengan kreatif, rapi, dan berkualitas.",
+    "shortDesc": "Gian Crafts adalah usaha kriya seni kerajinan tangan yang menghadirkan aneka produk rajutan handmade berkualitas, kreatif, dan dibuat dengan rapi.",
+    "longDesc": "Gian Crafts merupakan usaha yang bergerak di bidang kerajinan tangan (kriya seni), khususnya produk rajutan handmade. Gian Crafts menghasilkan berbagai produk rajut yang dibuat dengan kreatif, rapi, dan berkualitas untuk menunjang kebutuhan estetika maupun penggunaan harian.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -253,8 +253,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/caca_outlet.webp"
     ],
-    "shortDesc": "Caca Outlet adalah usaha digital yang saya jalankan sejak tahun 2021 dengan fokus pada penjualan aplikasi premium dan...",
-    "longDesc": "Caca Outlet adalah usaha digital yang saya jalankan sejak tahun 2021 dengan fokus pada penjualan aplikasi premium dan layanan subscription seperti Netflix. Usaha ini hadir untuk menyediakan layanan digital dengan harga terjangkau, fast respon, dan telah melayani 200+ pesanan dari pelanggan secara online.",
+    "shortDesc": "Caca Outlet adalah penyedia layanan akun aplikasi digital premium dan subscription (Netflix, dll.) terpercaya sejak 2021 dengan respon cepat dan harga terjangkau.",
+    "longDesc": "Caca Outlet adalah usaha digital yang beroperasi sejak tahun 2021 dengan fokus pada penyediaan akun aplikasi digital premium dan layanan subscription seperti Netflix. Caca Outlet hadir untuk menyediakan solusi layanan digital terpercaya dengan harga terjangkau, respons cepat, dan telah melayani lebih dari 200+ pesanan pelanggan secara online.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -325,8 +325,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/mi_chi.png"
     ],
-    "shortDesc": "Mi-Chi merupakan small business baru yana lahir dari keinginan untuk menghadirkan camilan berkualitas yang bisa dinik...",
-    "longDesc": "Mi-Chi merupakan small business baru yana lahir dari keinginan untuk menghadirkan camilan berkualitas yang bisa dinikmati kapan saja. Bermula dari dapur rumahan, kami berkomitmen menggunakan bahan-bahan pilihan untuk menciptakan rasa yang autentik. Nama \"Mi-Chi\" sendiri melambangkan kehangatan dan keakraban, karena kami percaya setiap gigitan camilan kami adalah cara terbaik untuk merayakan momen kecil.",
+    "shortDesc": "Mi-Chi adalah usaha kuliner modern yang menghadirkan aneka camilan lezat berkualitas dari bahan pilihan dengan rasa autentik yang siap dinikmati kapan saja.",
+    "longDesc": "Mi-Chi merupakan usaha kuliner yang lahir dari keinginan untuk menghadirkan camilan berkualitas yang bisa dinikmati kapan saja. Bermula dari dapur rumahan, Mi-Chi berkomitmen menggunakan bahan-bahan pilihan untuk menciptakan cita rasa autentik yang melambangkan kehangatan dan keakraban di setiap momen santai.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -358,8 +358,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/lovedbyfad.png"
     ],
-    "shortDesc": "usaha thrift di bidang fashion yang menyediakan berbagai item seperti topi, baju, dan fashion preloved lainnya dengan...",
-    "longDesc": "usaha thrift di bidang fashion yang menyediakan berbagai item seperti topi, baju, dan fashion preloved lainnya dengan style unik dan harga terjangkau. berawal dari item preloved sendiri, dan berkembang menjadi akun yang lebih besar. Selain menjual barang thrift,  juga membuka layanan titip jual consignment serta membeli barang fashion untuk dijual kembali dengan kualitas yang tetap diperhatikan.",
+    "shortDesc": "lovedbyfad adalah toko fashion thrift & preloved terkurasi yang menyediakan topi, pakaian, dan outfit bergaya unik dengan kualitas terjaga dan harga terjangkau.",
+    "longDesc": "lovedbyfad adalah usaha thrift di bidang fashion yang menyediakan berbagai item pilihan seperti topi, pakaian, dan busana preloved lainnya dengan gaya unik dan harga terjangkau. Selain menjual barang thrift terkurasi, lovedbyfad juga membuka layanan titip jual (consignment) serta pembelian barang fashion untuk dijual kembali dengan kontrol kualitas yang terjaga.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -374,8 +374,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/sans_diecast.jpg"
     ],
-    "shortDesc": "Usaha saya ini bergerak di bidang jual beli Diecast dan mini scale mobil untuk keperluan hobby yang target marketnya ...",
-    "longDesc": "Usaha saya ini bergerak di bidang jual beli Diecast dan mini scale mobil untuk keperluan hobby yang target marketnya mulai dari anak anak hingga bapak bapak",
+    "shortDesc": "Sans Diecast bergerak di bidang jual beli diecast dan miniatur mobil (mini scale) berkualitas untuk keperluan koleksi dan hobi para penggemar otomotif.",
+    "longDesc": "Sans Diecast bergerak di bidang jual beli diecast dan miniatur mobil (mini scale) berkualitas untuk keperluan hobi dan koleksi, dengan target pasar mulai dari anak-anak hingga orang dewasa pencinta otomotif.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -390,8 +390,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/sans_decoration.jpg"
     ],
-    "shortDesc": "Usaha ini bergerak dibidang percetakan seperti cetak foto, cetak sticker, cetak banner, Cetak poster dan juga cetak s...",
-    "longDesc": "Usaha ini bergerak dibidang percetakan seperti cetak foto, cetak sticker, cetak banner, Cetak poster dan juga cetak sertifikat",
+    "shortDesc": "Sans Decoration bergerak di bidang percetakan yang melayani cetak foto, stiker, banner, poster, hingga sertifikat dengan kualitas cetak rapi dan tajam.",
+    "longDesc": "Sans Decoration bergerak di bidang jasa percetakan yang menyediakan layanan cetak foto, cetak stiker, cetak banner, cetak poster, dan cetak sertifikat dengan hasil berkualitas tinggi, rapi, serta pengerjaan tepat waktu.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -406,8 +406,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/kidos_playground.jpg"
     ],
-    "shortDesc": "Usaha saya ini bergerak di Playground anak yang menyajikan berbagai macam permainan yang menghibur untuk anak anak se...",
-    "longDesc": "Usaha saya ini bergerak di Playground anak yang menyajikan berbagai macam permainan yang menghibur untuk anak anak seperti mandi bola, kiddy ride, rainbow slide dan lain sebagainya",
+    "shortDesc": "Kidos Playground adalah penyedia arena wahana bermain anak yang seru dan menghibur, menghadirkan mandi bola, kiddy ride, hingga rainbow slide.",
+    "longDesc": "Kidos Playground bergerak di bidang penyediaan arena bermain anak (indoor/outdoor playground) yang menyajikan berbagai wahana permainan menghibur dan aman untuk anak-anak seperti mandi bola, kiddy ride, rainbow slide, dan aneka permainan edukatif lainnya.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -422,8 +422,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/sans_cafe_eatery.jpg"
     ],
-    "shortDesc": "Usaha ini bergerak dibidang fnb dengan spesialisasi di kuliner khas cafe seperti dimsum, pangsit, kentang, katsu dan ...",
-    "longDesc": "Usaha ini bergerak dibidang fnb dengan spesialisasi di kuliner khas cafe seperti dimsum, pangsit, kentang, katsu dan sebagainya yang sejenis",
+    "shortDesc": "Sans Cafe & Eatery adalah usaha kuliner F&B spesialis menu cafe favorit seperti dimsum, pangsit, kentang goreng, dan chicken katsu yang lezat dan terjangkau.",
+    "longDesc": "Sans Cafe & Eatery bergerak di bidang kuliner F&B dengan spesialisasi aneka menu khas cafe favorit seperti dimsum gurih, pangsit renyah, kentang goreng, chicken katsu, serta ragam hidangan pendamping lezat lainnya.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -456,7 +456,7 @@ const businessesData = {
     "thumbs": [
       "images/logos/circle.png"
     ],
-    "shortDesc": "Circle adalah sebuah platform layanan jasa yang berfokus membantu mahasiswa penyandang disabilitas dalam kegiatan per...",
+    "shortDesc": "CIRCLE adalah platform layanan jasa pendampingan akademik dan aksesibilitas untuk mendukung mahasiswa penyandang disabilitas di lingkungan kampus UNJ.",
     "longDesc": "Circle adalah sebuah platform layanan jasa yang berfokus membantu mahasiswa penyandang disabilitas dalam kegiatan perkuliahan di lingkungan Universitas Negeri Jakarta. Circle menghubungkan mahasiswa penyandang disabilitas dengan relawan mahasiswa non-disabilitas untuk memberikan dukungan akademik, pendampingan, serta bantuan aksesibilitas selama proses belajar.\nMelalui pendekatan digital dan kolaboratif, Circle bertujuan meningkatkan inklusivitas kampus, membangun kesadaran sosial mahasiswa, serta menciptakan lingkungan pendidikan yang lebih ramah dan setara bagi semua. Selain membantu proses pembelajaran, Circle juga memberikan pengalaman pengabdian dan sertifikat apresiasi bagi para relawan yang terlibat",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
@@ -526,8 +526,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/harash_perfume.jpg"
     ],
-    "shortDesc": "Parfume Harash adalah usaha yang bergerak di bidang penjualan parfume yang didirikan dengan tujuan sederhana, yaitu m...",
-    "longDesc": "Parfume Harash adalah usaha yang  bergerak di bidang penjualan parfume yang didirikan dengan tujuan sederhana, yaitu menghadirkan wewangian berkualitas dengan harga yang tidak bikin kantong jebol. Berawal dari kegemaran terhadap dunia wewangian, usaha ini terus berkembang dan mulai dikenal oleh banyak pelanggan dari berbagai kalangan.\nKami sadar bahwa parfume bukan lagi kebutuhan tersier yang hanya bisa dijangkau oleh sebagian orang. Makanya, Parfume Harash hadir untuk membuktikan bahwa tampil wangi dan percaya diri itu bisa dilakukan siapa saja, tanpa harus merogoh kocek terlalu dalam.\nKe depannya, Parfume Harash ingin terus berkembang, memperluas jangkauan pelanggan, dan konsisten menjaga kualitas produk yang kami tawarkan. Karena bagi kami, kepercayaan pelanggan adalah hal yang paling berharga dan tidak bisa ditukar dengan apapun.",
+    "shortDesc": "Harash Perfume menghadirkan aneka koleksi parfum dan wewangian berkualitas tinggi dengan aroma mewah yang memikat, tahan lama, dan harga terjangkau.",
+    "longDesc": "Harash Perfume adalah usaha yang bergerak di bidang penjualan aneka parfum dan wewangian berkualitas tinggi dengan harga yang terjangkau. Berawal dari kecintaan terhadap dunia wewangian, Harash Perfume hadir untuk membuktikan bahwa tampil wangi, elegan, dan percaya diri dapat dirasakan oleh siapa saja dengan menghadirkan aroma tahan lama dan pilihan varian wangi yang memikat.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -542,8 +542,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/sance_music_academy.jpg"
     ],
-    "shortDesc": "Usaha yang berfokus pada les privat musik seperti drum, keyboard, dan gitar, serta menjadi komunitas yang terdiri dar...",
-    "longDesc": "Usaha yang berfokus pada les privat musik seperti drum, keyboard, dan gitar, serta menjadi komunitas yang terdiri dari para penampil berpengalaman yang dapat disewa untuk mengisi berbagai acara eksternal.",
+    "shortDesc": "Sance Music Academy menyediakan les privat musik (drum, keyboard, gitar) serta komunitas musisi dan performer berpengalaman untuk berbagai acara.",
+    "longDesc": "Sance Music Academy bergerak di bidang pendidikan dan jasa hiburan musik, menyediakan program les privat musik seperti drum, keyboard, dan gitar, serta menaungi komunitas penampil (performer) profesional dan berpengalaman yang siap mengisi berbagai acara formal maupun hiburan.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },
@@ -558,8 +558,8 @@ const businessesData = {
     "thumbs": [
       "images/logos/box_and_bites.png"
     ],
-    "shortDesc": "Usaha ini bergerak di bidang F&B yang menghadirkan inovasi dan kreativitas pada produk makanan favorit generasi Z",
-    "longDesc": "Usaha ini bergerak di bidang F&B yang menghadirkan inovasi dan kreativitas pada produk makanan favorit generasi Z",
+    "shortDesc": "Box and Bites adalah usaha kuliner F&B yang menghadirkan sajian makanan kekinian favorit generasi Z dengan rasa lezat dan kemasan praktis.",
+    "longDesc": "Box and Bites bergerak di bidang kuliner F&B dengan menghadirkan inovasi dan kreativitas pada produk makanan kekinian favorit generasi Z yang lezat, higienis, dan praktis dinikmati kapan saja.",
     "instagram": "https://instagram.com/hipmiunj",
     "whatsapp": "https://wa.me/6281234567890"
   },

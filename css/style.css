@@ -760,6 +760,20 @@ button {
   flex-wrap: wrap;
 }
 
+.hero__actions .btn-primary,
+#btn-lihat-usaha {
+  background-color: #006361;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 99, 97, 0.25);
+}
+
+.hero__actions .btn-primary:hover,
+#btn-lihat-usaha:hover {
+  background-color: #004d4b;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 99, 97, 0.35);
+}
+
 /* =====================================================
    CARDS
    ===================================================== */

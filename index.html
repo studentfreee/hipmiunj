@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/style.css?v=3.9" />
   <style>
     /* Clean, hardware-accelerated smooth lift-up transitions */
+    #usaha-grid #card-persada,
     #usaha-grid #card-whatowear,
     #usaha-grid article,
     #usaha-grid #card-taste-of-unj,
@@ -21,6 +22,7 @@
       will-change: transform;
     }
 
+    #usaha-grid #card-persada:hover,
     #usaha-grid #card-whatowear:hover,
     #usaha-grid article:hover,
     #usaha-grid #card-taste-of-unj:hover,
@@ -33,6 +35,7 @@
     }
 
     /* Smooth Image Zoom transitions */
+    #usaha-grid #card-persada img,
     #usaha-grid #card-whatowear img,
     #usaha-grid article img,
     #artikel #article-featured img,
@@ -41,6 +44,7 @@
       transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
     }
 
+    #usaha-grid #card-persada:hover img,
     #usaha-grid #card-whatowear:hover img {
       transform: scale(1.08) !important;
     }
@@ -50,6 +54,22 @@
     #article-sm-1:hover img,
     #article-sm-2:hover img {
       transform: scale(1.04) !important;
+    }
+
+    /* Hero button color matching join CTA button */
+    .hero__actions .btn-primary,
+    #btn-lihat-usaha {
+      background-color: #006361 !important;
+      color: #ffffff !important;
+      box-shadow: 0 8px 24px rgba(0, 99, 97, 0.25) !important;
+      border: none !important;
+    }
+
+    .hero__actions .btn-primary:hover,
+    #btn-lihat-usaha:hover {
+      background-color: #004d4b !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 12px 28px rgba(0, 99, 97, 0.35) !important;
     }
 
     /* MOBILE RESPONSIVE OVERRIDES (WIREFRAME SPEC) */
@@ -90,6 +110,7 @@
         display: contents !important;
       }
 
+      #usaha-grid>.container>div.home-biz-grid #card-persada,
       #usaha-grid>.container>div.home-biz-grid #card-whatowear,
       #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article {
         flex: 0 0 82% !important;
@@ -104,6 +125,7 @@
       }
 
       /* Image container inside row cards */
+      #usaha-grid>.container>div.home-biz-grid #card-persada>div:first-child,
       #usaha-grid>.container>div.home-biz-grid #card-whatowear>div:first-child,
       #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article>div:first-child {
         width: 36% !important;
@@ -112,6 +134,7 @@
         flex-shrink: 0 !important;
       }
 
+      #usaha-grid>.container>div.home-biz-grid #card-persada>div:first-child img,
       #usaha-grid>.container>div.home-biz-grid #card-whatowear>div:first-child img,
       #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article>div:first-child img {
         width: 100% !important;
@@ -122,6 +145,7 @@
       }
 
       /* Text details container inside row cards */
+      #usaha-grid>.container>div.home-biz-grid #card-persada>div:last-child,
       #usaha-grid>.container>div.home-biz-grid #card-whatowear>div:last-child,
       #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article>div:last-child {
         padding: 10px 12px !important;
@@ -133,6 +157,7 @@
         min-width: 0 !important;
       }
 
+      #usaha-grid>.container>div.home-biz-grid #card-persada h3,
       #usaha-grid>.container>div.home-biz-grid #card-whatowear h3,
       #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article h3,
       #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article div:last-child>p:first-child {
@@ -146,6 +171,7 @@
         color: #111827 !important;
       }
 
+      #usaha-grid>.container>div.home-biz-grid #card-persada p,
       #usaha-grid>.container>div.home-biz-grid #card-whatowear p,
       #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article p {
         font-size: 11px !important;
@@ -160,6 +186,7 @@
       }
 
       /* Hide giant detail buttons on mobile row layout */
+      #usaha-grid>.container>div.home-biz-grid #card-persada a,
       #usaha-grid>.container>div.home-biz-grid #card-whatowear a,
       #usaha-grid>.container>div.home-biz-grid>div.home-biz-subgrid article a {
         display: none !important;
@@ -338,7 +365,7 @@
       </ul>
 
       <div class="navbar__actions">
-        <a href="about.html#join" class="btn-primary" id="btn-gabung-nav">Gabung Anggota</a>
+        <a href="https://forms.gle/wBAjEJuR2MNEEi8L7" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-gabung-nav">Daftar Sekarang</a>
         <button class="navbar__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
           <span></span>
           <span></span>
@@ -354,8 +381,8 @@
     <a href="about.html" class="navbar__mobile-link" role="menuitem">Tentang Kami</a>
     <a href="usaha.html" class="navbar__mobile-link" role="menuitem">Usaha</a>
     <a href="blog.html" class="navbar__mobile-link" role="menuitem">Blog</a>
-    <a href="about.html#join" class="btn-primary mt-1" role="menuitem"
-      style="border-radius:0.5rem; text-align:center;">Gabung Anggota</a>
+    <a href="https://forms.gle/wBAjEJuR2MNEEi8L7" target="_blank" rel="noopener noreferrer" class="btn-primary mt-1" role="menuitem"
+      style="border-radius:0.5rem; text-align:center;">Daftar Sekarang</a>
   </div>
 
   <main>
@@ -381,7 +408,8 @@
           Pengusaha Muda Indonesia yang telah berdiri sejak 1972
         </p>
         <div class="hero__actions">
-          <a href="usaha.html" class="btn-primary" id="btn-lihat-usaha">Lihat Usaha Mahasiswa</a>
+          <a href="usaha.html" class="btn-primary" id="btn-lihat-usaha"
+            style="background-color: #006361; color: #ffffff; box-shadow: 0 8px 24px rgba(0, 99, 97, 0.25); border: none;">Lihat Usaha Mahasiswa</a>
           <a href="about.html" class="btn-outline-white" id="btn-pelajari">Pelajari Lebih Lanjut</a>
         </div>
       </div>
@@ -411,13 +439,13 @@
           <div class="home-biz-grid"
             style="display:grid; grid-template-columns:1.15fr 1fr; gap:16px; align-items:stretch;">
 
-            <!-- LEFT: Whatowear.id (Besar Kiri) -->
-            <div id="card-whatowear" onclick="window.location.href='detail-usaha.html?id=whatowear'"
+            <!-- LEFT: PT. Persada Raya Sentosa (Besar Kiri) -->
+            <div id="card-persada" onclick="window.location.href='detail-usaha.html?id=pt-persada-raya-sentosa'"
               style="background:rgba(255, 255, 255, 0.95); border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow-card); display:flex; flex-direction:column; cursor:pointer;">
               <!-- Image area -->
               <div
                 style="position:relative; flex:1; min-height:440px; overflow:hidden; background:#ffffff; display:flex; align-items:center; justify-content:center; padding:32px 24px;">
-                <img src="images/logos/whatowear.png" alt="Whatowear.id"
+                <img src="images/logos/pt_persada_raya_sentosa.jpg" alt="PT. Persada Raya Sentosa"
                   style="width:100%; height:100%; max-height:360px; object-fit:contain; display:block;" />
               </div>
               <!-- Text & Button -->
@@ -425,12 +453,11 @@
                 style="padding:18px 20px; background:rgba(255,255,255,0.95); display:flex; flex-direction:column; gap:8px;">
                 <h3
                   style="font-family:'Montserrat',sans-serif; font-size:18px; font-weight:800; color:#111827; margin:0;">
-                  Whatowear.id</h3>
+                  PT. Persada Raya Sentosa</h3>
                 <p style="font-size:13px; color:#4b5563; line-height:1.5; margin:0;">
-                  Brand modest fashion asal Indonesia yang menghadirkan hijab premium dan essential pieces berdesain
-                  timeless.
+                  Perusahaan IT Services, System Integrator, dan penyedia solusi teknologi (Technology Solution Provider) terpercaya untuk transformasi digital enterprise dan instansi.
                 </p>
-                <a href="detail-usaha.html?id=whatowear" class="btn-outline" id="btn-whatowear-detail"
+                <a href="detail-usaha.html?id=pt-persada-raya-sentosa" class="btn-outline" id="btn-persada-detail"
                   style="width:100%; text-align:center; display:block; border-radius:var(--radius-full); margin-top:4px;">Lihat
                   Detail</a>
               </div>
@@ -643,10 +670,10 @@
             muda terbesar di kampus.
           </p>
           <div class="join-cta__actions" style="gap: 16px;">
-            <a href="#" class="btn-primary" id="btn-daftar-sekarang"
+            <a href="https://forms.gle/wBAjEJuR2MNEEi8L7" target="_blank" rel="noopener noreferrer" class="btn-primary" id="btn-daftar-sekarang"
               style="border-radius: var(--radius-full); padding: 14px 38px; font-size: 14px; font-weight: 700; background-color: #006361; color: #ffffff; box-shadow: 0 8px 24px rgba(0, 99, 97, 0.25); border: none;">Daftar
               Sekarang</a>
-            <a href="#" class="btn-outline" id="btn-konsultasi"
+            <a href="https://wa.me/6285890575236" target="_blank" rel="noopener noreferrer" class="btn-outline" id="btn-konsultasi"
               style="border-radius: var(--radius-full); padding: 14px 38px; font-size: 14px; font-weight: 700; border: 1px solid var(--color-navy); color: var(--color-navy); background: transparent;">Konsultasi
               Gratis</a>
           </div>
@@ -687,9 +714,9 @@
           <div>
             <p class="footer__col-title">Hubungi Kami</p>
             <ul class="footer__links">
-              <li><a href="mailto:info@hipmiunj.id" class="footer__link">Email: info@hipmiunj.id</a></li>
-              <li><a href="https://wa.me/6281234567890" class="footer__link" target="_blank"
-                  rel="noopener noreferrer">WhatsApp: +62 812-3456-7890</a></li>
+              <li><a href="mailto:hub.hipmiptunj2026@gmail.com" class="footer__link">Email: hub.hipmiptunj2026@gmail.com</a></li>
+              <li><a href="https://wa.me/6285890575236" class="footer__link" target="_blank"
+                  rel="noopener noreferrer">WhatsApp: +62 858-9057-5236</a></li>
             </ul>
           </div>
         </div>
@@ -711,7 +738,7 @@
           </a>
         </div>
         <div class="footer__bottom-right">
-          <a href="#" aria-label="Instagram">
+          <a href="https://www.instagram.com/hipmi_unj/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -719,11 +746,12 @@
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
             </svg>
           </a>
-          <a href="#" aria-label="Twitter">
+          <a href="https://www.linkedin.com/company/hipmi-pt-unj/?originalSubdomain=id" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
             </svg>
           </a>
         </div>
