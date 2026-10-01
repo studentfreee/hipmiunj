@@ -3377,18 +3377,9 @@ button {
     gap: 4px;
   }
 
-  /* Quick About Navigation Tabs (Wireframe Spec) */
+  /* Quick About Navigation Tabs (Wireframe Spec) - Removed */
   .about-tabs-container {
-    display: block !important;
-    position: sticky;
-    top: 66px; /* Right below the mobile navbar */
-    z-index: 99;
-    background: rgba(255, 255, 255, 0.96) !important;
-    border-bottom: 1px solid rgba(164, 170, 179, 0.22) !important;
-    padding: 8px 0 !important;
-    margin: 12px 12px 0 !important;
-    border-radius: 16px !important;
-    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04) !important;
+    display: none !important;
   }
   .about-tabs {
     gap: 8px !important;
