@@ -144,7 +144,7 @@ const businessesData = {
     "title": "Box and Bites",
     "category": "Food & Beverage",
     "categoryClass": "fnb",
-    "ownerName": "Aditya Pratama Nugroho Widagdo & Arfan Prawirayudha",
+    "ownerName": "Aditya Pratama Nugroho Widagdo & Arfan Prawirayudha Wicaksono",
     "ownerRole": "Staf Bidang VI",
     "ownerAvatar": "images/default-avatar.png",
     "mainImage": "images/logos/box_and_bites.jpg",
@@ -180,16 +180,19 @@ const businessesData = {
     "category": "Kreatif",
     "categoryClass": "kreatif",
     "ownerName": "Virgi Baker Awan Zibarani",
-    "ownerRole": "Staf Bidang V",
-    "ownerAvatar": "images/default-avatar.png",
-    "mainImage": "images/logos/gian_crafts.jpg",
+    "ownerRole": "Kepala Kompartemen Media Bidang V",
+    "ownerAvatar": "images/members/Virgi_Baker_Awan_Z_Kepala_Kompartemen_MediaBidang_v.png",
+    "mainImage": "images/logos/gian_crafts_1.jpg",
     "thumbs": [
+      "images/logos/gian_crafts_1.jpg",
+      "images/logos/gian_crafts_2.jpg",
       "images/logos/gian_crafts.jpg"
     ],
-    "shortDesc": "Gian Crafts adalah usaha kriya seni kerajinan tangan yang menghadirkan aneka produk rajutan handmade berkualitas, kreatif, dan dibuat dengan rapi.",
-    "longDesc": "Gian Crafts merupakan usaha yang bergerak di bidang kerajinan tangan (kriya seni), khususnya produk rajutan handmade. Gian Crafts menghasilkan berbagai produk rajut yang dibuat dengan kreatif, rapi, dan berkualitas untuk menunjang kebutuhan estetika maupun penggunaan harian.",
-    "instagram": "https://instagram.com/hipmiunj",
-    "whatsapp": "https://wa.me/6281234567890"
+    "shortDesc": "Gian Crafts adalah usaha handmade yang menghadirkan aneka produk rajutan crochet unik dan amigurumi berkarakter personal, kreatif, serta dibuat penuh kerapian detail.",
+    "longDesc": "Gian.Craft merupakan usaha handmade kreatif yang menghadirkan berbagai produk crochet berkualitas dengan sentuhan personal dan dibuat secara handmade. Setiap produk dibuat dengan perhatian terhadap detail, mulai dari pemilihan warna, bentuk, hingga finishing rapi. Menyediakan koleksi Crochet Doll / Amigurumi, Keychain, Accessories, hingga Handmade Gift. Gian.Craft juga melayani Custom Request untuk menyesuaikan desain, karakter, warna, dan ukuran sesuai kebutuhan pelanggan. \"Handmade with love, created especially for you\".",
+    "instagram": "https://www.instagram.com/gian.crafts/",
+    "whatsapp": "https://wa.me/6281234567890",
+    "pdfUrl": "COMPANY PROFILE GIAN.CRAFT.pdf"
   },
   "rassasie-catering": {
     "title": "Rassasié Catering",

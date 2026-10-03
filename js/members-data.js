@@ -53,7 +53,7 @@ const membersData = {
       { name: "Muhammad Firman Zahwan Stya", role: "Staf Bidang III", image: "images/members/Muhammad_Firman_Zahwan_Stya_Staff_Bidang_III.png" },
       { name: "Novita Natalia Sipahutar", role: "Staf Bidang III", image: "images/members/Novita_Natalia_Sipahutar_Staff_Bidang_III.png" },
       { name: "Rizky Ramarif Kuntara", role: "Staf Bidang III", image: "images/members/Rizky_Ramarif_Kuntara_Staff_Bidang_III.png" },
-      { name: "Salsabila Azahra", role: "Staf Bidang III", image: "images/default-avatar.png" },
+      { name: "Salsabila Azzahra", role: "Staf Bidang III", image: "images/members/Salsabila_Azzahra_Staff_Bidang_III.png" },
       { name: "Timothy Meir Amadeus Simarmata", role: "Staf Bidang III", image: "images/members/Timothy_Meir_Amadeus_Simarmata_staff_Bidang_III.png" }
     ]
   },
@@ -71,6 +71,7 @@ const membersData = {
       { name: "Muhammad Bisyir", role: "Staf Bidang IV", image: "images/members/Muhammad_Bisyir_Staff_Bidang_IV.png" },
       { name: "Renata Rachel", role: "Staf Bidang IV", image: "images/members/Renata_Rachel_Bidang_IV.png" },
       { name: "Savira Aulia Nugroho", role: "Staf Bidang IV", image: "images/members/Savira_Aulia_Nugroho_Bidang_IV.png" },
+      { name: "Sere Natali Manuella P", role: "Staf Bidang IV", image: "images/members/Sere_Natali_Manuella_P_Staff_Bidang_IV.png" },
       { name: "Siva Nur'Ajizzah", role: "Staf Bidang IV", image: "images/members/Siva_NurAjizzah_Staff_Bidang_IV.png" },
       { name: "Syabrina", role: "Staf Bidang IV", image: "images/members/Syabrina_Bidang_IV.png" },
       { name: "Wanda Alva Verina", role: "Staf Bidang IV", image: "images/members/Wanda_Alva_Verina_Bidang_IV.png" }
@@ -102,7 +103,7 @@ const membersData = {
     description: "Mendorong sportivitas mahasiswa melalui kompetisi olahraga, meningkatkan kepekaan sosial melalui kepeloporan pemuda, serta melatih bakat kepemimpinan pemuda yang tangguh.",
     ketua: { name: "Akbar Fadil Anam", role: "Kepala Bidang VI", image: "images/members/Akbr_Fadil_Anam_Kepala_Bidang_V-Pemuda_and_Olahraga.png" },
     wakil: [
-      { name: "Shelomita Gladi D.", role: "Kepala Kompartemen Pemuda", image: "images/members/Shelomita_Gladi_D_Kepala_Kompartemen_Pemuda_Bidang_VI.png" },
+      { name: "Shelomita Glodia D.", role: "Kepala Kompartemen Pemuda", image: "images/members/Shelomita_Gladi_D_Kepala_Kompartemen_Pemuda_Bidang_VI.png" },
       { name: "Sri Indah Lestary", role: "Kepala Kompartemen Olahraga", image: "images/members/Sri_Indah_Lestary_Kepala_Kompartemen_Olahraga_Bidang_VI.png" },
       { name: "Razan Maliq Hidayat", role: "Kepala Kompartemen Kepeloporan", image: "images/members/Razan_Maliq_Hidayat_Kepala_Kompartemen_Kepeloporan_Bidang_VI.png" }
     ],
@@ -111,7 +112,6 @@ const membersData = {
       { name: "Danang Gilar Sambudi", role: "Staf Bidang VI", image: "images/members/Danang_Gilar_Sambudi_Staff_Bidang_VI.png" },
       { name: "Aditya Pratama Nugroho Widagdo", role: "Staf Bidang VI", image: "images/members/Aditya_Pratama_Nugroho_Widagdo.png" },
       { name: "Zacky Hafidz Alfadli", role: "Staf Bidang VI", image: "images/members/Zacky_Hafidz_Alfadli.png" },
-      { name: "Ridho Kamal", role: "Staf Bidang VI", image: "images/default-avatar.png" },
       { name: "Muthia Devi", role: "Staf Bidang VI", image: "images/members/Muthia_Devi.png" },
       { name: "Naura Syifa Aghnaya", role: "Staf Bidang VI", image: "images/members/Naura_Syifa_Aghnaya_Staff_Bidang_VI.png" },
       { name: "Muhammad Hanif Al Farizi", role: "Staf Bidang VI", image: "images/members/Muhammad_Hanif_Al_Farizi.png" }
