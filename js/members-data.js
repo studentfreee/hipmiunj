@@ -2,7 +2,7 @@ const membersData = {
   bidang1: {
     title: "Bidang I : Organisasi, Kaderisasi, & Keanggotaan (OKK)",
     description: "Membina dan mengelola kekuatan internal organisasi, melaksanakan program kaderisasi pengusaha muda yang sistematis dan berkelanjutan, serta membina database keanggotaan HIPMI PT UNJ yang solid.",
-    ketua: { name: "Mochamad Adzka Rahman", role: "Kepala Bidang I", image: "images/members/Mochamad_Adzka_Rahman_Kepala_Bidang_I___Organisasi,_Keanggotaan_and_Kaderisasi.png" },
+    ketua: { name: "Mochamad Adzka Rachman", role: "Kepala Bidang I", image: "images/members/Mochamad_Adzka_Rahman_Kepala_Bidang_I___Organisasi,_Keanggotaan_and_Kaderisasi.png" },
     wakil: [
       { name: "Galang Hikmal Silalahi", role: "Kepala Kompartemen Organisasi", image: "images/members/Galang_Hikmal_Silalahi_Kepala_Kompartemen_Organisasi_Bidang_I.png" },
       { name: "Dewi Nurhikmah", role: "Kepala Kompartemen Kaderisasi", image: "images/members/Dewi_Nurhikmah_Kepala_Kompartemen_KaderisasiBidang_I.png" },
