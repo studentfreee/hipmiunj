@@ -586,77 +586,50 @@ const businessesData = {
 };
 
 const blogsData = {
-  "pitching-day-2024": {
-    title: "Pelepasan Program Inkubasi Bisnis Angkatan Baru",
-    date: "12 Jun 2024",
-    category: "Berita",
-    mainImage: "images/article-pitching.jpg",
-    paragraphs: [
-      "Ekosistem kewirausahaan di perguruan tinggi merupakan salah satu kunci utama dalam mencetak generasi penerus yang tidak hanya cerdas akademis, tetapi juga tangguh dalam menghadapi tantangan dunia bisnis nyata. PT HIPMI UNJ berkomitmen untuk terus menjadi wadah inkubasi yang mumpuni bagi para mahasiswa.",
-      "Dalam program inkubasi angkatan baru ini, HIPMI UNJ resmi melepas 20 startup mahasiswa pilihan untuk mengikuti pelatihan intensif selama enam bulan ke depan. Para peserta terpilih ini akan mendapatkan bimbingan intensif dari mentor berpengalaman di industri, akses ke jaringan investasi, serta dukungan pengembangan produk.",
-      "Langkah ini diharapkan mampu melahirkan startup inovatif baru yang mandiri, berdaya saing tinggi, serta mampu memberikan dampak ekonomi yang nyata bagi lingkungan sekitar kampus Universitas Negeri Jakarta."
-    ],
-    quote: "Kewirausahaan di kampus bukan hanya tentang mencari keuntungan, tetapi tentang menciptakan nilai tambah dan memberikan solusi bagi permasalahan sosial di sekitar kita."
-  },
-  "memulai-bisnis": {
-    title: "Mengapa Mahasiswa Harus Memulai Bisnis Sekarang?",
-    date: "10 Jun 2024",
-    category: "Opini",
-    mainImage: "images/blog-digital-mktg.jpg",
-    paragraphs: [
-      "Dunia kerja yang semakin kompetitif menuntut mahasiswa untuk tidak hanya memiliki indeks prestasi akademis yang tinggi, melainkan juga soft skills yang matang. Salah satu cara terbaik untuk melatih keterampilan tersebut adalah dengan mulai merintis bisnis sendiri sejak di bangku kuliah.",
-      "Memulai bisnis di usia muda memberikan ruang kegagalan yang lebih luas. Kegagalan di masa perkuliahan adalah sarana belajar terbaik tanpa menanggung risiko finansial keluarga yang terlampau besar. Dari proses berwirausaha, mahasiswa belajar tentang kepemimpinan, pemecahan masalah, negosiasi, dan manajemen keuangan praktis.",
-      "Oleh karena itu, manfaatkanlah ekosistem pendukung yang ada di kampus, seperti inkubator bisnis dan unit kegiatan mahasiswa HIPMI, untuk memulai langkah pertama wirausaha Anda tanpa menunda-nunda."
-    ],
-    quote: "Usia muda adalah modal terbaik untuk berani mencoba, gagal, bangkit kembali, dan menemukan formula sukses bisnis yang orisinal."
-  },
-  "workshop-digital-marketing": {
-    title: "Workshop Digital Marketing untuk Startup Kampus",
-    date: "08 Jun 2024",
+  "hipmi-x-dunhill": {
+    title: "HIPMI PT UNJ x DUNHILL Hadirkan “Creative Impact: Membangun Ekonomi Kreatif Melalui Inovasi dan Kolaborasi”",
+    date: "29 Agu 2026",
     category: "Event",
-    mainImage: "images/blog-workshop.jpg",
+    mainImage: "images/blog-hipmi-x-dunhill.jpg",
     paragraphs: [
-      "Sebagai bagian dari komitmen berkelanjutan dalam memberdayakan wirausaha muda, PT HIPMI UNJ sukses menyelenggarakan workshop intensif bertajuk 'Mastering Digital Marketing for Campus Startup'. Acara ini dihadiri oleh puluhan pendiri bisnis mahasiswa.",
-      "Workshop ini menghadirkan praktisi pemasaran digital ternama yang membagikan materi taktis seputar Search Engine Optimization (SEO), manajemen media sosial, pemasaran berbayar (paid ads), dan teknik pembuatan konten yang memicu konversi penjualan.",
-      "Para peserta tidak hanya mendengarkan teori, melainkan langsung melakukan praktik audit media sosial bisnis mereka sendiri dan merancang kampanye iklan digital sederhana yang dibimbing langsung oleh instruktur."
+      "Himpunan Pengusaha Muda Indonesia Perguruan Tinggi Universitas Negeri Jakarta (HIPMI PT UNJ) berkolaborasi dengan DUNHILL dalam menyelenggarakan talkshow bertajuk “Creative Impact: Membangun Ekonomi Kreatif Melalui Inovasi dan Kolaborasi” pada Sabtu, 29 Agustus 2026, bertempat di Skitraw, Jakarta.",
+      "Kegiatan ini menjadi ruang pertemuan bagi para pengusaha muda dan peserta untuk memperoleh wawasan mengenai perkembangan ekonomi kreatif, inovasi dalam dunia usaha, serta pentingnya membangun kolaborasi dan jejaring dalam mengembangkan bisnis.",
+      "Melalui tema Creative Impact, kegiatan ini mengangkat pentingnya kreativitas dan inovasi sebagai bagian dari upaya menciptakan nilai tambah dalam dunia usaha. Di tengah perkembangan industri kreatif yang semakin dinamis, kemampuan untuk beradaptasi, menghasilkan gagasan baru, serta membangun kolaborasi menjadi salah satu aspek penting bagi generasi muda yang ingin mengembangkan potensi kewirausahaan.",
+      "Talkshow ini juga menjadi wadah bagi peserta untuk mendapatkan economic insight dan pengetahuan baru mengenai dunia bisnis kreatif. Selain sesi berbagi wawasan, kegiatan turut membuka ruang interaksi dan networking antarpeserta sehingga diharapkan dapat memperluas koneksi serta membuka peluang kolaborasi di masa mendatang.",
+      "Kolaborasi antara HIPMI PT UNJ dan DUNHILL melalui kegiatan ini menjadi salah satu bentuk sinergi dalam menghadirkan ruang pengembangan wawasan dan jejaring bagi generasi muda. HIPMI PT UNJ terus mendorong semangat “Pengusaha Pejuang, Pejuang Pengusaha” dengan menghadirkan berbagai kegiatan yang dapat mendukung pengembangan kapasitas, kreativitas, dan jejaring kewirausahaan mahasiswa.",
+      "Dengan terlaksananya kegiatan ini, HIPMI PT UNJ berharap semangat inovasi dan kolaborasi dapat terus tumbuh di kalangan generasi muda, sekaligus mendorong lahirnya gagasan dan inisiatif baru yang memberikan dampak positif bagi perkembangan ekonomi kreatif."
     ],
-    quote: "Pemasaran digital bukan sekadar membuat konten yang viral, melainkan bagaimana menyampaikan pesan yang tepat kepada audiens yang tepat."
+    quote: "Kreativitas dan inovasi bukan hanya tentang ide baru, melainkan bagaimana membangun sinergi dan kolaborasi untuk menciptakan dampak ekonomi yang berkelanjutan."
   },
-  "scaling-bisnis": {
-    title: "Strategi Scaling Bisnis bagi Pengusaha Muda",
-    date: "05 Jun 2024",
-    category: "Opini",
-    mainImage: "images/blog-strategy.jpg",
-    paragraphs: [
-      "Banyak pengusaha pemula terjebak pada fase operasional harian sehingga kesulitan meningkatkan skala bisnis mereka (scaling). Padahal, transisi dari bisnis mikro ke korporasi menengah membutuhkan strategi manajemen yang sangat matang.",
-      "Kunci utama dari scaling bisnis terletak pada standardisasi sistem kerja (SOP) dan pendelegasian wewenang yang jelas. Pengusaha harus berani merekrut tim yang berkompeten dan membangun struktur delegasi agar roda bisnis tetap berputar tanpa ketergantungan 100% pada kehadiran fisik owner.",
-      "Selain sistem operasional, pemanfaatan teknologi digital untuk otomatisasi administrasi dan logistik juga sangat disarankan untuk menjaga efisiensi biaya dan akurasi pelayanan pelanggan."
-    ],
-    quote: "Untuk bertumbuh besar, Anda harus berhenti menjadi satu-satunya pekerja di dalam bisnis Anda dan mulai menjadi pemimpin sesungguhnya."
-  },
-  "wawancara-alumni": {
-    title: "Wawancara Eksklusif: Alumni UNJ di Kancah Global",
-    date: "01 Jun 2024",
-    category: "Berita",
-    mainImage: "images/blog-networking.jpg",
-    paragraphs: [
-      "Bagaimana seorang mahasiswa biasa dari Universitas Negeri Jakarta dapat membangun gurita bisnis ekspor hingga ke mancanegara? Kali ini kami berkesempatan mewawancarai salah satu alumni inspiratif yang sukses berkiprah secara global.",
-      "Beliau menceritakan awal mula perjuangannya membangun relasi bisnis internasional, mengatasi kendala logistik lintas negara, hingga menjaga standar kualitas produk agar dapat lolos sertifikasi ketat di pasar Eropa dan Amerika Serikat.",
-      "Alumni kita ini berpesan agar pengusaha muda di lingkungan UNJ jangan pernah membatasi visi bisnis mereka hanya di tingkat lokal, melainkan harus berani melangkah mencari peluang ekspor global."
-    ],
-    quote: "Kualitas produk lokal kita sama sekali tidak kalah saing di pasar dunia, yang kita butuhkan hanyalah keberanian untuk melangkah keluar."
-  },
-  "business-pitching": {
-    title: "Business Pitching Day: Temukan Investor Anda",
-    date: "28 Mei 2024",
+  "beauty-preneur-2026": {
+    title: "Beauty Preneur 2026: Membangun Kepercayaan Diri dan Jejaring bagi Entrepreneur Muda",
+    date: "08 Agu 2026",
     category: "Event",
-    mainImage: "images/article-pitching.jpg",
+    mainImage: "images/blog-beauty-preneur-2026.jpg",
     paragraphs: [
-      "Mendapatkan pendanaan eksternal merupakan salah satu akselerator tercepat bagi pertumbuhan startup. PT HIPMI UNJ kembali memfasilitasi kebutuhan tersebut dengan menyelenggarakan program tahunan 'Business Pitching Day'.",
-      "Dalam ajang bergengsi ini, 10 startup mahasiswa terbaik diberikan kesempatan mempresentasikan rencana bisnis (pitch deck) mereka di hadapan panel juri yang terdiri dari Venture Capitalist (VC), Angel Investor, dan perwakilan perbankan nasional.",
-      "Selain memperebutkan pendanaan langsung, para finalis juga mendapatkan masukan berharga mengenai model bisnis dan proyeksi keuangan mereka agar lebih matang sebelum meluncur ke pasar sesungguhnya."
+      "Himpunan Pengusaha Muda Indonesia Perguruan Tinggi Universitas Negeri Jakarta (HIPMI PT UNJ) sukses menyelenggarakan Beauty Preneur 2026 pada Sabtu, 8 Agustus 2026, bertempat di SFD-B Lantai 6, Ruang 602, Universitas Negeri Jakarta. Mengusung tema “How Young Entrepreneurs Build Confidence Through Personal Appearance and Networking”, kegiatan ini menjadi wadah bagi mahasiswa dan entrepreneur muda untuk meningkatkan kepercayaan diri, personal grooming, serta kemampuan membangun jejaring dalam lingkungan profesional dan kewirausahaan.",
+      "Beauty Preneur 2026 menghadirkan rangkaian kegiatan yang dirancang secara interaktif, mulai dari Hands-on Makeup Class, Personal Grooming Class, hingga Networking Session. Melalui rangkaian tersebut, peserta tidak hanya memperoleh pengetahuan mengenai personal appearance, tetapi juga mendapatkan pengalaman praktis dan kesempatan untuk membangun koneksi dengan sesama mahasiswa serta entrepreneur muda.",
+      "Dalam kegiatan ini, peserta mendapatkan pengalaman langsung melalui sesi Hands-on Makeup Class bersama Ulfa Tri Hapsari selaku Makeup Artist (MUA). Sesi ini memberikan kesempatan kepada peserta untuk mempelajari teknik dasar dan penerapan makeup secara langsung sebagai bagian dari upaya membangun penampilan yang lebih profesional dan percaya diri.",
+      "Selain itu, Personal Grooming Class turut memberikan wawasan mengenai pentingnya menjaga penampilan dan personal grooming dalam menunjang aktivitas profesional. Penampilan yang tepat menjadi salah satu aspek yang dapat mendukung komunikasi dan interaksi seseorang, khususnya ketika berhadapan dengan berbagai pihak dalam lingkungan akademik, organisasi, maupun dunia usaha.",
+      "Rangkaian kegiatan kemudian dilengkapi dengan Networking Session yang menghadirkan Ardania Ilmi sebagai talkshow speaker. Sesi ini menjadi ruang bagi peserta untuk berdiskusi, bertukar pengalaman, serta memperluas jejaring dengan individu yang memiliki latar belakang dan ketertarikan di bidang kewirausahaan. Acara ini juga dihadiri oleh Anita Rahma selaku Ketua OC Beauty Preneur HIPMI PT JAYA, yang turut mendukung terselenggaranya kegiatan sebagai bagian dari kolaborasi dan penguatan kapasitas entrepreneur muda.",
+      "Melalui Beauty Preneur 2026, HIPMI PT UNJ berkomitmen untuk terus menghadirkan ruang pembelajaran dan pengembangan diri bagi mahasiswa dan entrepreneur muda. Kepercayaan diri, kemampuan berkomunikasi, personal appearance, dan networking merupakan aspek yang saling mendukung dalam membangun kapasitas generasi muda untuk menghadapi dunia profesional dan kewirausahaan."
     ],
-    quote: "Presentasi bisnis yang sukses tidak hanya berbicara tentang kehebatan ide, tetapi bagaimana ide tersebut dapat terukur menghasilkan keuntungan finansial."
+    quote: "Kepercayaan diri, personal appearance, dan networking adalah pilar penting dalam membentuk karakter entrepreneur muda yang siap bersaing di kancah profesional."
+  },
+  "hipmi-insight-2026": {
+    title: "HIPMI PT UNJ Gelar HIPMI Insight 2026, Dorong Penguatan Kepemimpinan dan Kaderisasi Pengusaha Muda",
+    date: "04 Agu 2026",
+    category: "Event",
+    mainImage: "images/blog-hipmi-insight-2026.jpg",
+    paragraphs: [
+      "Himpunan Pengusaha Muda Indonesia Perguruan Tinggi Universitas Negeri Jakarta (HIPMI PT UNJ) menyelenggarakan HIPMI Insight 2026 pada Selasa, 4 Agustus 2026, bertempat di Aula Bung Hatta, Kampus A Universitas Negeri Jakarta. Kegiatan ini merupakan program kerja Bidang Organisasi, Kaderisasi, dan Keanggotaan (OKK) HIPMI PT UNJ dengan mengusung tema “Membangun Kader Pengusaha Muda melalui Kepemimpinan, Jejaring, dan Kaderisasi.”",
+      "HIPMI Insight 2026 diselenggarakan sebagai wadah bagi mahasiswa dan pengusaha muda untuk memperluas wawasan mengenai kepemimpinan, kewirausahaan, serta pentingnya membangun jejaring dalam mengembangkan kapasitas dan potensi generasi muda di dunia usaha.",
+      "Kegiatan ini menghadirkan tiga narasumber dari jajaran HIPMI, yaitu Dzaki Adinda Husna (Ketua Umum BPC HIPMI Jakarta Selatan), Mahesa Satadini Husein (Ketua Bidang Organisasi, Kaderisasi, dan Keanggotaan OKK HIPMI JAYA), serta Dhimas Pringgolarinto (Ketua Umum BPC HIPMI Jawa Timur). Sementara itu, kegiatan dipandu oleh Muhammad Sholeh Fuddin (Ketua DUTA FEB UNJ) selaku moderator.",
+      "Dalam kegiatan tersebut, para narasumber berbagi wawasan dan pengalaman mengenai pentingnya kepemimpinan, pengembangan kapasitas diri, serta pembangunan jejaring bagi pengusaha muda. Diskusi juga menjadi ruang bagi peserta untuk memahami berbagai tantangan dan peluang dalam dunia kewirausahaan sekaligus memperoleh perspektif langsung dari para pelaku organisasi dan pengusaha muda di lingkungan HIPMI.",
+      "Selain menjadi ruang berbagi pengetahuan, HIPMI Insight 2026 juga memberikan kesempatan kepada peserta untuk membangun relasi dan memperluas jaringan. Interaksi antara peserta, narasumber, dan jejaring HIPMI diharapkan dapat membuka peluang kolaborasi serta mendukung pengembangan potensi kewirausahaan di kalangan mahasiswa dan generasi muda.",
+      "Melalui semangat “Pengusaha Pejuang, Pejuang Pengusaha”, HIPMI PT UNJ terus berupaya menghadirkan ruang pembelajaran dan pengembangan bagi kader pengusaha muda. HIPMI Insight 2026 menjadi salah satu langkah dalam memperkuat kapasitas kader melalui pengembangan kepemimpinan, jejaring, dan proses kaderisasi yang berkelanjutan."
+    ],
+    quote: "Membangun kader pengusaha muda bukan hanya soal bisnis, melainkan memperkuat karakter kepemimpinan, integritas, dan jaringan yang kokoh."
   }
 };
 

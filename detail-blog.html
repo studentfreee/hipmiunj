@@ -422,7 +422,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
-      const blogId = urlParams.get('id') || 'pitching-day-2024';
+      const blogId = urlParams.get('id') || 'hipmi-x-dunhill';
       const blogData = window.blogsData && window.blogsData[blogId];
       
       if (!blogData) {
@@ -436,7 +436,11 @@
       }
       
       // Update page title & description
-      document.title = `PT HIPMI UNJ`;
+      document.title = `${blogData.title} | PT HIPMI UNJ`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && blogData.paragraphs && blogData.paragraphs.length > 0) {
+        metaDesc.setAttribute('content', blogData.paragraphs[0].slice(0, 160));
+      }
       
       // Render Header Meta & Title
       document.getElementById('blogCategory').textContent = blogData.category;

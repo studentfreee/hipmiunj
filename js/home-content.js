@@ -47,14 +47,24 @@ document.addEventListener('DOMContentLoaded', function () {
     const blog = blogsData[blogId];
     if (!card || !blog) return;
 
-    setImage(card, 'img', blog.mainImage, blog.title);
+    card.querySelectorAll('img').forEach(img => {
+      img.src = blog.mainImage;
+      img.alt = blog.title;
+    });
+
+    card.onclick = () => {
+      window.location.href = `detail-blog.html?id=${blogId}`;
+    };
 
     const paragraphs = card.querySelectorAll('p');
     if (paragraphs[0]) paragraphs[0].textContent = blog.category;
     if (cardId === 'article-featured') {
-      const title = card.querySelector('h3');
-      if (title) title.textContent = blog.title;
+      card.querySelectorAll('h3').forEach(h3 => {
+        h3.textContent = blog.title;
+      });
       if (paragraphs[1]) paragraphs[1].textContent = blog.paragraphs[0] || '';
+      const mobileP = card.querySelector('.article-featured-mobile-text p');
+      if (mobileP) mobileP.textContent = blog.category;
     } else {
       const title = card.querySelector('h3');
       if (title) title.textContent = blog.title;
@@ -71,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
   updateBusinessCard('card-mi-chi', 'mi-chi');
   updateBusinessCard('card-fresh-beef', 'fresh-meat-supply');
 
-  updateBlogCard('article-featured', 'pitching-day-2024');
-  updateBlogCard('article-sm-1', 'memulai-bisnis');
-  updateBlogCard('article-sm-2', 'wawancara-alumni');
+  updateBlogCard('article-featured', 'hipmi-x-dunhill');
+  updateBlogCard('article-sm-1', 'beauty-preneur-2026');
+  updateBlogCard('article-sm-2', 'hipmi-insight-2026');
 });

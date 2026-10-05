@@ -550,11 +550,7 @@
             Deskripsi lengkap...
           </p>
 
-          <div class="detail-info__media">
-            <a href="#" class="media-btn" id="btn-instagram" aria-label="Instagram Resmi" title="Instagram Resmi" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; justify-content:center; text-decoration:none; color:inherit;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-          </div>
+
 
           <div class="detail-action-bar">
             <a href="#" class="btn-whatsapp" id="btn-whatsapp" target="_blank" rel="noopener noreferrer">
@@ -717,7 +713,7 @@
       }
       
       // Update links
-      document.getElementById('btn-instagram').href = bizData.instagram;
+
       document.getElementById('btn-whatsapp').href = `${bizData.whatsapp}?text=Halo%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(bizData.title)}!`;
       
       // Update PDF button
